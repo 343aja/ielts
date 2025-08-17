@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mock Test Tabs</title>
+    <link rel="stylesheet" href="./mock_1.css" />
+    
+</head>
+
+<body>
+    <div class="tabs-header">
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" data-part="1">Part 1</div>
+                <div class="tab" data-part="2">Part 2</div>
+                <div class="tab" data-part="3">Part 3</div>
+                <div class="tab" data-part="4">Part 4</div>
+            </div>
+            <span class="timer-display">30:00</span>
+            <div class="audio-timer-container" >
+                <span id="audio-status" style="font-size:16px;color:#888;">Audio loading...</span>
+                <audio id="audio-player" src="../../audio/mock1.mp3"></audio>
+                <button class="save-button" onclick="saveAsText()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- === PARTS === -->
+    <div id="part-1" class="question-part active">
+        <div class="part-header">
+            <p><strong>Part 1</strong></p>
+            <p>Listen and answer questions 1–10.</p>
+        </div>
+        <div class="questions-container">
+            <div class="question-prompt">
+                <p><strong>Questions 1-10</strong></p>
+                <p>Complete the notes below.</p>
+                <p>Write <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> for each answer.</p>
+            </div>
+            <p class="centered-title">Phone interview</p>
+            <table>
+                <tr>
+                    <td>Example</td>
+                    <td>Answer</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>John Murphy</td>
+                </tr>
+                <tr>
+                    <td>Position applying for:</td>
+                    <td>lifeguard</td>
+                </tr>
+                <tr>
+                    <td>Street Address:</td>
+                    <td>45 <input type="text" id="q1" class="answer-input" placeholder="1" /> Court</td>
+                </tr>
+                <tr>
+                    <td>Contact phone number:</td>
+                    <td><input type="text" id="q2" class="answer-input" placeholder="2" /></td>
+                </tr>
+                <tr>
+                    <td>Current part-time job:</td>
+                    <td><input type="text" id="q3" class="answer-input" placeholder="3" /></td>
+                </tr>
+                <tr>
+                    <td>Previous job at Ridgemont High School:</td>
+                    <td><input type="text" id="q4" class="answer-input" placeholder="4" /></td>
+                </tr>
+                <tr>
+                    <td>Additional relevant work experience:</td>
+                    <td><input type="text" id="q5" class="answer-input" placeholder="5" /></td>
+                </tr>
+                <tr>
+                    <td>Relevant skills/qualifications:</td>
+                    <td>CPR certification & <input type="text" id="q6" class="answer-input" placeholder="6" /></td>
+                </tr>
+                <tr>
+                    <td>CPR certification expiration date:</td>
+                    <td><input type="text" id="q7" class="answer-input" placeholder="7" /></td>
+                </tr>
+                <tr>
+                    <td>Preferred weekly shift:</td>
+                    <td><input type="text" id="q8" class="answer-input" placeholder="8" /></td>
+                </tr>
+                <tr>
+                    <td>Time available to start work:</td>
+                    <td><input type="text" id="q9" class="answer-input" placeholder="9" /></td>
+                </tr>
+                <tr>
+                    <td>Advertisement source:</td>
+                    <td><input type="text" id="q10" class="answer-input" placeholder="10" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="part-2" class="question-part">
+        <div class="part-header">
+            <p><strong>Part 2</strong></p>
+            <p>Listen and answer questions 11–20.</p>
+        </div>
+        <div class="questions-container">
+            <div class="question">
+                <div class="question-prompt">
+                    <p><strong>Questions 11-20</strong></p>
+                    <p>Choose the correct letter, A, B or C</p>
+                </div>
+                <div class="single-choice-container">
+                    <div class="single-choice">
+                        <p><strong>11</strong> The lecture was organised by</p>
+                        <label><input type="radio" name="q11" value="A">&nbsp;&nbsp;City of Nottingham.</label>
+                        <label><input type="radio" name="q11" value="B">&nbsp;&nbsp;University of Nottingham Students'
+                            Union.</label>
+                        <label><input type="radio" name="q11" value="C">&nbsp;&nbsp;Nottingham Police
+                            Department.</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>12</strong> The majority of crime on campus is</p>
+                        <label><input type="radio" name="q12" value="A">&nbsp;&nbsp;Drugs and Alcohol.</label>
+                        <label><input type="radio" name="q12" value="B">&nbsp;&nbsp;Violence</label>
+                        <label><input type="radio" name="q12" value="C">&nbsp;&nbsp;Theft</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>13</strong> The campus crime rate has ………….. so far this year.</p>
+                        <label><input type="radio" name="q13" value="A">&nbsp;&nbsp;increased</label>
+                        <label><input type="radio" name="q13" value="B">&nbsp;&nbsp;decreased</label>
+                        <label><input type="radio" name="q13" value="C">&nbsp;&nbsp;stayed the same</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>14</strong> Why is there added concern about crime?</p>
+                        <label><input type="radio" name="q14" value="A">&nbsp;&nbsp;exaggeration in media</label>
+                        <label><input type="radio" name="q14" value="B">&nbsp;&nbsp;crime TV shows</label>
+                        <label><input type="radio" name="q14" value="C">&nbsp;&nbsp;factual news articles</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>15</strong> Carlos says if you are the victim of a crime, you should</p>
+                        <label><input type="radio" name="q15" value="A">&nbsp;&nbsp;run away.</label>
+                        <label><input type="radio" name="q15" value="B">&nbsp;&nbsp;resist</label>
+                        <label><input type="radio" name="q15" value="C">&nbsp;&nbsp;seek help.</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>16</strong> What is the primary method for increasing safety?</p>
+                        <label><input type="radio" name="q16" value="A">&nbsp;&nbsp;informing students and staff of
+                            safety precautions</label>
+                        <label><input type="radio" name="q16" value="B">&nbsp;&nbsp;offering free self-defense courses
+                            to students</label>
+                        <label><input type="radio" name="q16" value="C">&nbsp;&nbsp;reminding students to carry a mobile
+                            phone at all times</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>17</strong> If a student must work late, it is most important to</p>
+                        <label><input type="radio" name="q17" value="A">&nbsp;&nbsp;not return home until the
+                            morning.</label>
+                        <label><input type="radio" name="q17" value="B">&nbsp;&nbsp;go back with a friend.</label>
+                        <label><input type="radio" name="q17" value="C">&nbsp;&nbsp;bring a mobile phone.</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>18</strong> It is dangerous to</p>
+                        <label><input type="radio" name="q18" value="A">&nbsp;&nbsp;drive home late at night.</label>
+                        <label><input type="radio" name="q18" value="B">&nbsp;&nbsp;carry a knife.</label>
+                        <label><input type="radio" name="q18" value="C">&nbsp;&nbsp;carry pepper spray.</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>19</strong> Students who complete a self-defense course are</p>
+                        <label><input type="radio" name="q19" value="A">&nbsp;&nbsp;more aware of dangers.</label>
+                        <label><input type="radio" name="q19" value="B">&nbsp;&nbsp;mentally tougher.</label>
+                        <label><input type="radio" name="q19" value="C">&nbsp;&nbsp;walking more confidently.</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>20</strong> A university is</p>
+                        <label><input type="radio" name="q20" value="A">&nbsp;&nbsp;not surrounded by walls.</label>
+                        <label><input type="radio" name="q20" value="B">&nbsp;&nbsp;patrolled by military.</label>
+                        <label><input type="radio" name="q20" value="C">&nbsp;&nbsp;completely safe.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part-3" class="question-part">
+        <div class="part-header">
+            <p><strong>Part 3</strong></p>
+            <p>Listen and answer questions 21–30.</p>
+        </div>
+        <div class="questions-container">
+            <div class="question">
+                <div class="question-prompt">
+                    <p><strong>Questions 21-23</strong></p>
+                    <p>Choose the correct letter, A, B or C.</p>
+                </div>
+                <div class="single-choice-container">
+                    <div class="single-choice">
+                        <p><strong>21</strong> The proposal will</p>
+                        <label><input type="radio" name="q21" value="A">&nbsp;&nbsp;be reviewed by two
+                            examiners.</label>
+                        <label><input type="radio" name="q21" value="B">&nbsp;&nbsp;be added to the final grade.</label>
+                        <label><input type="radio" name="q21" value="C">&nbsp;&nbsp;be returned with feedback.</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>22</strong> The proposal will consist mostly of</p>
+                        <label><input type="radio" name="q22" value="A">&nbsp;&nbsp;topics</label>
+                        <label><input type="radio" name="q22" value="B">&nbsp;&nbsp;methods</label>
+                        <label><input type="radio" name="q22" value="C">&nbsp;&nbsp;results</label>
+                    </div>
+                    <div class="single-choice">
+                        <p><strong>23</strong> For the practice paper, the tutor has directed the students to make sure
+                            to</p>
+                        <label><input type="radio" name="q23" value="A">&nbsp;&nbsp;pay attention to time
+                            limits.</label>
+                        <label><input type="radio" name="q23" value="B">&nbsp;&nbsp;write at least 6,000 words.</label>
+                        <label><input type="radio" name="q23" value="C">&nbsp;&nbsp;keep on topic.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-prompt">
+                    <p><strong>Questions 24-30</strong></p>
+                    <p>Complete the sentences below.</p>
+                    <p>Write <strong>ONE WORD AND/OR A NUMBER</strong> for each answer</p>
+                </div>
+                <div style="border: 1px solid #000000; padding: 15px;">
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>There is no need to <input type="text" class="answer-input" id="q24" placeholder="24"> lots
+                            of people.</li>
+                        <li>Pay attention to the <input type="text" class="answer-input" id="q25" placeholder="25"> of
+                            the final report.</li>
+                        <li>Prepare two <input type="text" class="answer-input" id="q26" placeholder="26">, one for the
+                            teacher, another for the students themselves.</li>
+                        <li>The deadline of the final paper is <input type="text" class="answer-input" id="q27"
+                                placeholder="27"></li>
+                        <li>The students can <input type="text" class="answer-input" id="q28" placeholder="28"> their
+                            topics before the beginning of April.</li>
+                        <li>Students deciding to change topics must deliver a <input type="text" class="answer-input"
+                                id="q29" placeholder="29"> to the teacher in advance.</li>
+                        <li>At the beginning of the report, the hypothesis and an outline of the <input type="text"
+                                class="answer-input" id="q30" placeholder="30"> are needed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part-4" class="question-part">
+        <div class="part-header">
+            <p><strong>Part 4</strong></p>
+            <p>Listen and answer questions 31–40.</p>
+        </div>
+        <div class="questions-container">
+            <div class="question">
+                <div class="question-prompt">
+                    <p><strong>Questions 31-40</strong></p>
+                    <p>Complete the notes below.</p>
+                    <p>Write <strong>NO MORE THAN TWO WORDS</strong> for each answer.</p>
+                </div>
+                <div style="border: 1px solid #000000; padding: 15px;">
+                    <p class="centered-title">Advertising Effect</p>
+                    <p><strong>The important factor to consider</strong></p>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>&bull;&nbsp;&nbsp;The <input type="text" class="answer-input" id="q31" placeholder="31">
+                            that customers must travel affects the probability that they will buy the product.</li>
+                    </ul>
+                    <p><strong>Methods of communication</strong></p>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>&bull;&nbsp;&nbsp;Advertising slogans are easier to remember if there is a <input
+                                type="text" class="answer-input" id="q32" placeholder="32"> played with them.</li>
+                        <li>&bull;&nbsp;&nbsp;Mandy's Candy Store appeals to people's sense of <input type="text"
+                                class="answer-input" id="q33" placeholder="33"> to draw in customers.</li>
+                        <li>&bull;&nbsp;&nbsp;To an ad campaign for digital products, it is <input type="text"
+                                class="answer-input" id="q34" placeholder="34"> that is extremely important.</li>
+                    </ul>
+                    <p><strong>Effect on your product sales</strong></p>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>&bull;&nbsp;&nbsp;The customer's <input type="text" class="answer-input" id="q35"
+                                placeholder="35"> after he or she experiences the ad is most important.</li>
+                    </ul>
+                    <p><strong>Marketing strategies</strong></p>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>&bull;&nbsp;&nbsp;On international flights, it is wise for advertisements to be displayed in
+                            the common <input type="text" class="answer-input" id="q36" placeholder="36"> of most
+                            passengers.</li>
+                        <li>&bull;&nbsp;&nbsp;Very few young people buy <input type="text" class="answer-input" id="q37"
+                                placeholder="37"></li>
+                        <li>&bull;&nbsp;&nbsp;The UNESCO website would be a good place to advertise for companies aiming
+                            to improve the <input type="text" class="answer-input" id="q38" placeholder="38"></li>
+                        <li>&bull;&nbsp;&nbsp;One good location to place ads for suntan lotion is the <input type="text"
+                                class="answer-input" id="q39" placeholder="39"></li>
+                        <li>&bull;&nbsp;&nbsp;A good scene for a water purification commercial would be wonderful sights
+                            of a <input type="text" class="answer-input" id="q40" placeholder="40"></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <script src="./mock1_listening.js"></script>
+</body>
+
+</html>

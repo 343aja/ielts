@@ -1,0 +1,123 @@
+/* Dashboard Styles */
+.dashboard-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Section */
+.dashboard-header {
+  background: white;
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.dashboard-header h1 {
+  color: #212529;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Mock Tests Section */
+.mock-tests-section {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mock-tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.mock-test-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.mock-test-card:hover:not(.disabled) {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+}
+
+.mock-test-card.disabled {
+  opacity: 0.6;
+}
+
+.mock-test-card h3 {
+  color: #212529;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.mock-test-card p {
+  color: #6c757d;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.start-test-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 120px;
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.start-test-btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.start-test-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .mock-tests-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mock-tests-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 1.5rem 0;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .mock-test-card {
+    padding: 1.25rem;
+  }
+}

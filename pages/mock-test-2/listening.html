@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mock-2-listening</title>
+    <link rel="stylesheet" href="./listening.css">
+</head>
+
+<body>
+    <div class="tabs-header">
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" data-part="1">Part 1</div>
+                <div class="tab" data-part="2">Part 2</div>
+                <div class="tab" data-part="3">Part 3</div>
+                <div class="tab" data-part="4">Part 4</div>
+            </div>
+            <span class="timer-display">30:00</span>
+            <div class="audio-timer-container">
+                <span id="audio-status" style="font-size:16px;color:#888;">Audio loading...</span>
+                <audio id="audio-player" src="../../audio/mock1.mp3"></audio>
+                <button class="save-button" onclick="saveAsText()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+
+            <div id="part-1" class="question-part active">
+                <div class="part-header">
+                    <p><strong>Part 1</strong></p>
+                    <p>Listen and answer questions 1–10.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 1-10</strong></p>
+                            <p>Complete the notes below.</p>
+                            <p>Write <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> for each answer.</p>
+                        </div>
+
+                        <div style="border:1px solid #ccc; padding:15px; width: 800px; margin-top:20px;">
+                            <p class="centered-title"><strong>Tourism Survey</strong></p>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Name:</span>
+                                <span>Robert Goddard</span>
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Destination:</span>
+                                <span>Melbourne</span>
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">First time visited
+                                    Melbourne?</span>
+                                <input type="text" id="q1" class="answer-input" placeholder="1"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Best thing about the city:</span>
+                                <input type="text" id="q2" class="answer-input" placeholder="2"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Favourite attraction:</span>
+                                <input type="text" id="q3" class="answer-input" placeholder="3"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Best thing about the destination's
+                                    dining options:</span>
+                                <input type="text" id="q4" class="answer-input" placeholder="4"
+                                    style="margin-left: 10px;"> of food
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Method of transport to
+                                    destination:</span>
+                                by <input type="text" id="q5" class="answer-input" placeholder="5"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Age group:</span>
+                                <input type="text" id="q6" class="answer-input" placeholder="6"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Income level:</span>
+                                <input type="text" id="q7" class="answer-input" placeholder="7"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Purpose of visit:</span>
+                                <ul style="margin: 5px 0 5px 20px; list-style-type: disc;">
+                                    <li>on business</li>
+                                    <li><input type="text" id="q8" class="answer-input" placeholder="8"></li>
+                                </ul>
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Occupation:</span>
+                                <ul style="margin: 5px 0 5px 20px; list-style-type: disc;">
+                                    <li><input type="text" id="q9" class="answer-input" placeholder="9"></li>
+                                    <li>writer for a travel magazine</li>
+                                </ul>
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: bold; margin-right: 10px;">Opinion about accommodation:</span>
+                                <input type="text" id="q10" class="answer-input" placeholder="10"
+                                    style="margin-left: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-2" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 2</strong></p>
+                    <p>Listen and answer questions 11–20.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 11-14</strong></p>
+                            <p>Choose the correct answer.</p>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <p><strong>11</strong>&nbsp;&nbsp;What is the project that Mark and Gina want to start?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q11" value="A">
+                                        <span>business school requirements</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q11" value="B">
+                                        <span>directions to the business school</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q11" value="C">
+                                        <span>explaining the business school experience</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>12</strong>&nbsp;&nbsp;Who is the target audience?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q12" value="A">
+                                        <span>business students</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q12" value="B">
+                                        <span>business school applicants</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q12" value="C">
+                                        <span>summer school attendees</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>13</strong>&nbsp;&nbsp;How will they convey the information?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q13" value="A">
+                                        <span>summer course lecture</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q13" value="B">
+                                        <span>informational video</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q13" value="C">
+                                        <span>pamphlet in the mail</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>14</strong>&nbsp;&nbsp;They want to do this project because</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q14" value="A">
+                                        <span>students worry about their studies.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q14" value="B">
+                                        <span>they want to obtain a good grade.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q14" value="C">
+                                        <span>they want to attract future business school applicants.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 15-20</strong></p>
+                            <p>Complete the table below.</p>
+                            <p>Write <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> for each answer.</p>
+                        </div>
+
+                        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                            <thead>
+                                <tr>
+                                    <th
+                                        style="padding:16px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Topic</th>
+                                    <th
+                                        style="padding:16px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        style="padding:16px; border:1px solid #ddd; font-weight: bold; line-height: 2.0;">
+                                        &bull;&nbsp;&nbsp;Academics<br>&bull;&nbsp;&nbsp;<input type="text" id="q15"
+                                            class="answer-input" placeholder="15" style="width: 120px;"></td>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">7 minutes</td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding:16px; border:1px solid #ddd; font-weight: bold; line-height: 2.0;">
+                                        &bull;&nbsp;&nbsp;<input type="text" id="q16" class="answer-input"
+                                            placeholder="16"
+                                            style="width: 120px;"><br>&bull;&nbsp;&nbsp;Cafeteria<br>&bull;&nbsp;&nbsp;<input
+                                            type="text" id="q17" class="answer-input" placeholder="17"
+                                            style="width: 120px;"></td>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">6 minutes</td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding:16px; border:1px solid #ddd; font-weight: bold; line-height: 2.0;">
+                                        &bull;&nbsp;&nbsp;Social activity <br>&bull;&nbsp;&nbsp;<input type="text"
+                                            id="q18" class="answer-input" placeholder="18"
+                                            style="width: 120px;"><br>&bull;&nbsp;&nbsp;<input type="text" id="q19"
+                                            class="answer-input" placeholder="19" style="width: 120px;"></td>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">8 minutes</td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding:16px; border:1px solid #ddd; font-weight: bold; line-height: 2.0;">
+                                        &bull;&nbsp;&nbsp;Conclusion</td>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">nearly <input
+                                            type="text" id="q20" class="answer-input" placeholder="20"
+                                            style="width: 120px;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-3" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 3</strong></p>
+                    <p>Listen and answer questions 21–30.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 21-26</strong></p>
+                            <p>Complete the table.</p>
+                            <p>Write <strong>NO MORE THAN TWO WORDS</strong> for each answer.</p>
+                        </div>
+
+                        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                            <thead>
+                                <tr>
+                                    <th
+                                        style="padding:12px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Subject</th>
+                                    <th
+                                        style="padding:12px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Textbook Used</th>
+                                    <th
+                                        style="padding:12px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Criticism of this book</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd; font-weight: bold;">Social History
+                                    </td>
+                                    <td style="padding:12px; border:1px solid #ddd;"><input type="text" id="q21"
+                                            class="answer-input" placeholder="21"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">It is <input type="text" id="q22"
+                                            class="answer-input" placeholder="22"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd; font-weight: bold;">Cultural Studies
+                                    </td>
+                                    <td style="padding:12px; border:1px solid #ddd;"><input type="text" id="q23"
+                                            class="answer-input" placeholder="23"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">It <input type="text" id="q24"
+                                            class="answer-input" placeholder="24"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd; font-weight: bold;"><input
+                                            type="text" id="q25" class="answer-input" placeholder="25"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">Government in Action</td>
+                                    <td style="padding:12px; border:1px solid #ddd;">It is <input type="text" id="q26"
+                                            class="answer-input" placeholder="26"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="question-prompt" style="margin-top:40px;">
+                            <p><strong>Questions 27-30</strong></p>
+                            <p>Choose the correct letter, <strong>S</strong>, <strong>C</strong>, or <strong>P</strong>.
+                            </p>
+                            <p><strong>NB</strong> You may use a letter more than once.</p>
+                            <p><strong>S</strong> Social History</p>
+                            <p><strong>C</strong> Cultural Studies</p>
+                            <p><strong>P</strong> Political Theory</p>
+                            <p><em>What are the speakers’ favorite subjects?</em></p>
+                        </div>
+
+                        <table class="matching-table" style="margin-top: 12px;">
+                            <thead>
+                                <tr>
+                                    <th>Speakers</th>
+                                    <th>S</th>
+                                    <th>C</th>
+                                    <th>P</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>27.</strong> Steve</td>
+                                    <td class="clickable-cell" data-question="27" data-value="S"></td>
+                                    <td class="clickable-cell" data-question="27" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="27" data-value="P"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>28.</strong> David</td>
+                                    <td class="clickable-cell" data-question="28" data-value="S"></td>
+                                    <td class="clickable-cell" data-question="28" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="28" data-value="P"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>29.</strong> Susan</td>
+                                    <td class="clickable-cell" data-question="29" data-value="S"></td>
+                                    <td class="clickable-cell" data-question="29" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="29" data-value="P"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>30.</strong> Olive</td>
+                                    <td class="clickable-cell" data-question="30" data-value="S"></td>
+                                    <td class="clickable-cell" data-question="30" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="30" data-value="P"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-4" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 4</strong></p>
+                    <p>Listen and answer questions 31–40.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 31-35</strong></p>
+                            <p>Choose the correct answer.</p>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <p><strong>31</strong>&nbsp;&nbsp;Why did the lecturer choose to focus on the Pleasanton
+                                Town Market?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q31" value="A">
+                                        <span>It was the first ever Town Market.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q31" value="B">
+                                        <span>It has been covered extensively in local history classes.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q31" value="C">
+                                        <span>It is often mentioned in some literature of the library.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>32</strong>&nbsp;&nbsp;The Town Market originally made a large profit selling</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q32" value="A">
+                                        <span>handcrafts</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q32" value="B">
+                                        <span>vegetables</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q32" value="C">
+                                        <span>animals</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>33</strong>&nbsp;&nbsp;The money that the marketers made contributes to local</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q33" value="A">
+                                        <span>reconstruction</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q33" value="B">
+                                        <span>development</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q33" value="C">
+                                        <span>defense</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>34</strong>&nbsp;&nbsp;Market sales plummeted due to a lack of viable</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q34" value="A">
+                                        <span>A. agriculture</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q34" value="B">
+                                        <span>B. transport</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q34" value="C">
+                                        <span>C. city planning.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p><strong>35</strong>&nbsp;&nbsp;Mayor John C. Wiley decided the Clock tower would be used
+                                as a ………….. in the early stages of the uprising</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q35" value="A">
+                                        <span>clock</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q35" value="B">
+                                        <span>grounds for battle</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q35" value="C">
+                                        <span>jail</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 36-40</strong></p>
+                            <p>Complete the table below.</p>
+                            <p>Write <strong>ONE WORD ONLY</strong> for each answer.</p>
+                        </div>
+
+                        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                            <thead>
+                                <tr>
+                                    <th
+                                        style="padding:12px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Research Methods</th>
+                                    <th
+                                        style="padding:12px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Objects</th>
+                                    <th
+                                        style="padding:12px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Problems</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd;">reference section</td>
+                                    <td style="padding:12px; border:1px solid #ddd;"><input type="text" id="q36"
+                                            class="answer-input" placeholder="36" style="width: 120px;"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">there is too much information</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd;"><input type="text" id="q37"
+                                            class="answer-input" placeholder="37" style="width: 120px;"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">Rebellion</td>
+                                    <td style="padding:12px; border:1px solid #ddd;">bias makes it <input type="text"
+                                            id="q38" class="answer-input" placeholder="38" style="width: 120px;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd;"><input type="text" id="q39"
+                                            class="answer-input" placeholder="39" style="width: 120px;"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">Jim Wiley</td>
+                                    <td style="padding:12px; border:1px solid #ddd;">the information is insufficient
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px; border:1px solid #ddd;">newspaper archives</td>
+                                    <td style="padding:12px; border:1px solid #ddd;"><input type="text" id="q40"
+                                            class="answer-input" placeholder="40" style="width: 120px;"></td>
+                                    <td style="padding:12px; border:1px solid #ddd;">more detail is needed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<script src="./listening.js"></script>
+
+</body>
+
+</html>

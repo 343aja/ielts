@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Writing Test - Mock 1</title>
+    <link rel="stylesheet" href="mock1_writing.css">
+</head>
+<body>
+    <div class="container">
+        <header class="test-header">
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="task1">Task 1</button>
+                <button class="tab-btn" data-tab="task2">Task 2</button>
+            </div>
+            <div class="timer-container">
+                <span class="timer-display" id="timer">60:00</span>
+            </div>
+            <div class="action-buttons">
+                <button id="download-btn" class="download-btn">Submit</button>
+            </div>
+        </header>
+
+        <div class="tab-container">
+            <div class="tab-content">
+                <!-- Task 1 Content -->
+                <div class="tab-pane active" id="task1">
+                    <div class="task-header">
+                        <h2>Writing Task 1</h2>
+                        <p class="task-instruction">You should spend about 20 minutes on this task.</p>
+                    </div>
+                    
+                    <div class="question-section">
+                        <h3>Question:</h3>
+                        <p class="question-text">
+                            The chart below shows the percentage of households in different income brackets in three countries in 2020.
+                            Summarize the information by selecting and reporting the main features, and make comparisons where relevant.
+                        </p>
+                        
+                        <div class="image-container">
+                            <img src="https://via.placeholder.com/600x400/4a90e2/ffffff?text=IELTS+Chart+Image" 
+                                 alt="IELTS Chart" class="task-image">
+                        </div>
+                    </div>
+                    
+                    <div class="answer-section">
+                        <h3>Your Answer:</h3>
+                        <textarea id="task1-answer" 
+                                  placeholder="Write your answer here (minimum 150 words)..."
+                                  class="answer-textarea"></textarea>
+                        <div class="word-count">
+                            <span id="task1-word-count">0</span> words
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 2 Content -->
+                <div class="tab-pane" id="task2">
+                    <div class="task-header">
+                        <h2>Writing Task 2</h2>
+                        <p class="task-instruction">You should spend about 40 minutes on this task.</p>
+                    </div>
+                    
+                    <div class="question-section">
+                        <h3>Question:</h3>
+                        <p class="question-text">
+                            Some people believe that the best way to reduce crime is to give longer prison sentences. 
+                            Others believe that there are better alternative ways to reduce crime. 
+                            Discuss both views and give your opinion.
+                        </p>
+                    </div>
+                    
+                    <div class="answer-section">
+                        <h3>Your Answer:</h3>
+                        <textarea id="task2-answer" 
+                                  placeholder="Write your answer here (minimum 250 words)..."
+                                  class="answer-textarea"></textarea>
+                        <div class="word-count">
+                            <span id="task2-word-count">0</span> words
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="mock1_writing.js"></script>
+</body>
+</html>

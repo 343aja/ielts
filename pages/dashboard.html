@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Header Section -->
+    <header class="dashboard-header">
+      <h1>IELTS Mock Tests</h1>
+    </header>
+
+    <!-- Mock Tests Section -->
+    <section class="mock-tests-section">
+      <div class="mock-tests-grid">
+        <div class="mock-test-card">
+          <h3>Mock Test 1</h3>
+          <p>Complete IELTS practice test</p>
+          <a href="./mock-test-1/auth.html" class="start-test-btn">
+            Start Test
+          </a>
+        </div>
+
+        <div class="mock-test-card ">
+          <h3>Mock Test 2</h3>
+          <p>Advanced level test</p>
+          <a href="./mock-test-2/auth.html" class="start-test-btn" >
+            Start Test
+          </a>
+        </div>
+
+        <div class="mock-test-card disabled">
+          <h3>Mock Test 3</h3>
+          <p>Expert level test</p>
+          <button class="start-test-btn" disabled>
+            Coming Soon
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>
