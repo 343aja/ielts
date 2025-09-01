@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         timerDisplay.textContent = "00:00";
         audio.pause();
         audio.currentTime = 0;
+        saveAsText();
       }
     }
   }
