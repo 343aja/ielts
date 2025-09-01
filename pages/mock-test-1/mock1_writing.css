@@ -113,6 +113,7 @@ body {
 /* Tab Content */
 .tab-content {
     padding: 20px;
+  
 } 
 
 .tab-pane {
@@ -143,6 +144,11 @@ body {
     font-size: 16px;
     font-style: italic;
 }
+.task11{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
 /* Question Section */
 .question-section {
@@ -151,6 +157,7 @@ body {
     background-color: #f1f2ec;
     border: 1px solid #e0e0e0;
     text-align: left;
+    width: 50%;
     border-radius: 5px;
 }
 
@@ -184,6 +191,7 @@ body {
 /* Answer Section */
 .answer-section {
     margin-bottom: 20px;
+    width: 50%;
 }
 
 .answer-section h3 {

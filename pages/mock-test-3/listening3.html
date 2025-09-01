@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mock-2-listening</title>
+    <link rel="stylesheet" href="./listening.css">
+</head>
+
+<body>
+    <div class="tabs-header">
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" data-part="1">Part 1</div>
+                <div class="tab" data-part="2">Part 2</div>
+                <div class="tab" data-part="3">Part 3</div>
+                <div class="tab" data-part="4">Part 4</div>
+            </div>
+            <span class="timer-display">30:00</span>
+            <div class="audio-timer-container">
+                <span id="audio-status" style="font-size:16px;color:#888;">Audio loading...</span>
+                <audio id="audio-player" src="https://ia600206.us.archive.org/3/items/listening-3/Listening-3.mp3"></audio>
+                <button class="save-button" onclick="saveAsText()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+
+            <div id="part-1" class="question-part active">
+                <div class="part-header">
+                    <p><strong>Part 1</strong></p>
+                    <p>Listen and answer questions 1–10.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 1-6</strong></p>
+                            <p>Complete the form below. </p>
+                            <p>Write <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> for each answer.</p>
+                        </div>
+
+                        <div style="border:1px solid #ccc; padding:15px; width: 800px; margin-top:20px;">
+                            <p class="centered-title"><strong>Holiday Plus Hotel, Easthaven - CHANGE OF BOOKING</strong>
+                            </p>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;"><strong>Customer
+                                        details</strong>
+                                </span>
+                                <span></span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Surname:</span>
+                                <input type="text" id="q1" class="answer-input" placeholder="1"
+                                    style="margin-left: 10px;">
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">First name:</span>
+                                <span>Susan</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;"><strong>Existing booking details
+                                    </strong>
+                                </span>
+                                <span></span>
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Check-in date: </span>
+                                <input type="text" id="q2" class="answer-input" placeholder="2"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Number of nights:</span>
+                                <input type="text" id="q3" class="answer-input" placeholder="3"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;"><strong>New booking
+                                    </strong>
+                                </span>
+                                <span></span>
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">What the customer wants to
+                                    do:</span>
+                                book a
+                                <input type="text" id="q4" class="answer-input" placeholder="4"
+                                    style="margin-left: 10px;"> room instead of the single
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Accommodation offered to
+                                    customer:</span>
+                                <input type="text" id="q5" class="answer-input" placeholder="5"
+                                    style="margin-left: 10px;">suite, consisting of:
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;"></span>
+                                <ul style="margin: 5px 0 5px 20px; list-style-type: disc;">
+                                    <li>two bedrooms (as requested)</li>
+                                    <li>living room</li>
+                                    <input type="text" id="q6" class="answer-input" placeholder="6"
+                                        style="margin-left: 10px;">
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="question-prompt">
+                            <p><strong>Questions 7-10</strong></p>
+                            <p>Complete the notes below. </p>
+                            <p>Write <strong>ONE WORD AND / OR A NUMBER</strong> for each answer.</p>
+                        </div>
+                        <div style="border:1px solid #ccc; padding:15px; width: 800px; margin-top:20px;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;"><strong>Further
+                                        details</strong></span>
+                                <!-- <span>Susan</span> -->
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Additional cost for new
+                                    booking:</span>
+                                £<input type="text" id="q7" class="answer-input" placeholder="7"
+                                    style="margin-left: 10px;">
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;"><strong>Special
+                                        requirements</strong></span>
+                                <!-- <span>Susan</span> -->
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Customer is bringing a</span>
+
+                                <input type="text" id="q8" class="answer-input" placeholder="8">
+
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">One of the group is allergic
+                                    to</span>
+
+                                <input type="text" id="q9" class="answer-input" placeholder="9">
+
+
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Phone number of customer’s
+                                    husband: </span>
+                                <input type="text" id="q10" class="answer-input" placeholder="10"
+                                    style="margin-left: 10px;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-2" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 2</strong></p>
+                    <p>Listen and answer questions 11–20.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 11-14</strong></p>
+                            <p>Choose the correct answer.</p>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <p><strong>11-12</strong>&nbsp;&nbsp;Who was responsible for the project?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q11-12" value="A">
+                                        <span>the central government</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q11-12" value="B">
+                                        <span>local government</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q11-12" value="C">
+                                        <span>a multinational company</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q11-12" value="D">
+                                        <span>a national company</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q11-12" value="E">
+                                        <span>city residents</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 40px;">
+                                <strong>13-14</strong>&nbsp;&nbsp;Which <strong>TWO</strong> pre-existing features of
+                                the site are now part of the new facilities?
+                            </p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q13-14" value="A">
+                                        <span>football stadium</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q13-14" value="B">
+                                        <span>playing fields</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q13-14" value="C">
+                                        <span>passenger hall</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q13-14" value="D">
+                                        <span>control tower</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="checkbox" name="q13-14" value="E">
+                                        <span>aircraft hangars</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="question-prompt" style="margin-top:40px;">
+                            <p><strong>Questions 15-20</strong></p>
+                            <p>What does the speaker say that visitors can do in each of the following places in the
+                                museum?</p>
+                            <p>Write the correct letter,<strong>A</strong>,<strong>B</strong>,<strong>C</strong>, or
+                                <strong>D</strong> next to questions 15-20
+                            </p>
+                            <div style="border:1px solid #ccc; padding:15px; width: 800px; margin-top:20px;">
+                                <p><strong>What visitors can do</strong></p>
+                                <p><strong>A.</strong> watch a film</p>
+                                <p><strong>B.</strong> buy something</p>
+                                <p><strong>C.</strong> listen to a live talk</p>
+                                <p><strong>D.</strong> learn a practical skill</p>
+                            </div>
+                        </div>
+
+                        <table class="matching-table" style="margin-top: 12px;">
+                            <thead>
+                                <tr>
+                                    <th>Place</th>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>D</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>15.</strong> forge</td>
+                                    <td class="clickable-cell" data-question="15" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="15" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="15" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="15" data-value="D"></td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>16.</strong> market</td>
+                                    <td class="clickable-cell" data-question="16" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="16" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="16" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="16" data-value="D"></td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>17.</strong> bakery</td>
+                                    <td class="clickable-cell" data-question="17" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="17" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="17" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="17" data-value="D"></td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>18.</strong> building zone</td>
+                                    <td class="clickable-cell" data-question="18" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="18" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="18" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="18" data-value="D"></td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>19.</strong> hall</td>
+                                    <td class="clickable-cell" data-question="19" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="19" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="19" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="19" data-value="D"></td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>20.</strong> basement</td>
+                                    <td class="clickable-cell" data-question="20" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="20" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="20" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="20" data-value="D"></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-3" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 3</strong></p>
+                    <p>Listen and answer questions 21–30.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 21-26</strong></p>
+                            <p>Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <p><strong>21</strong>&nbsp;&nbsp;According to Anna, why is Humboldt now largely forgotten?
+                            </p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q21" value="A">
+                                        <span>Many of his theories have been disproved.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q21" value="B">
+                                        <span>His ideas just seem like common sense these days</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q21" value="C">
+                                        <span>Some of the behaviour he advocated is damaging to the environment.</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p><strong>22</strong>&nbsp;&nbsp;How does Martin summarise Humboldt's thinking about the
+                                natural world?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q22" value="A">
+                                        <span>It is driven by animals' quest for food.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q22" value="B">
+                                        <span>It is a system in which things affect each other</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q22" value="C">
+                                        <span>It is always changing in ways that are difficult to predict.</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p><strong>23</strong>&nbsp;&nbsp;What do Martin and Anna agree was the main reason that
+                                Humboldt was so
+                                famous in his lifetime?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q23" value="A">
+                                        <span>He was often seen with other famous people.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q23" value="B">
+                                        <span>He became an expert in many different fields</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q23" value="C">
+                                        <span>His research was relevant to ordinary people.</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p><strong>24</strong>&nbsp;&nbsp;Anna says that Humboldt's books were popular because</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q24" value="A">
+                                        <span>they were an appealing mixture of science and literature.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q24" value="B">
+                                        <span>they explained complex ideas in an accessible way.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q24" value="C">
+                                        <span>they contained practical advice that people could use</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p><strong>25</strong>&nbsp;&nbsp;Martin and Anna compare Humboldt's books to Wikipedia to
+                                make the point that</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q25" value="A">
+                                        <span>they were regularly updated.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q25" value="B">
+                                        <span> they contained an enormous amount of detail.</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q25" value="C">
+                                        <span>many different contributors helped to write them</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p><strong>26</strong>&nbsp;&nbsp;What is Martin doing when he mentions President Jefferson?
+                            </p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q26" value="A">
+                                        <span>explaining how Humboldt formed his views on slavery</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q26" value="B">
+                                        <span>demonstrating how influential Humboldt was in America</span>
+                                    </label>
+                                </div>
+                                <div class="multi-choice-option">
+                                    <label>
+                                        <input type="radio" name="q26" value="C">
+                                        <span>criticising Humboldt for not challenging Jefferson's behaviour</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="question-prompt" style="margin-top:40px;">
+                            <p><strong>Questions 27-30</strong></p>
+                            <p>What do the students say were Humboldt's achievements when he visited thefollowing
+                                places?</p>
+                            <p>Choose <strong>FOUR</strong>,answers and write the correct letter <strong>A-E</strong>,
+                                next to questions 27-30.
+                            </p>
+                            <div style="border:1px solid #ccc; padding:15px; width: 800px; margin-top:20px;">
+                                <p><strong>Achievements</strong></p>
+                                <p><strong>A</strong> worked out what caused a particular illness</p>
+                                <p><strong>B</strong> discovered several previously unknown species</p>
+                                <p><strong>C</strong> advised on how the economy could be developed</p>
+                                <p><strong>D</strong> realised that human activities were altering the climate</p>
+                                <p><strong>E</strong> confirmed the presence of an unusual geographical feature</p>
+                            </div>
+                        </div>
+
+                        <table class="matching-table" style="margin-top: 12px;">
+                            <thead>
+                                <tr>
+                                    <th>Place</th>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>D</th>
+                                    <th>E</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>27.</strong> Lake Valencia</td>
+                                    <td class="clickable-cell" data-question="27" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="27" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="27" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="27" data-value="D"></td>
+                                    <td class="clickable-cell" data-question="27" data-value="E"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>28.</strong> Mount Chimborazo</td>
+                                    <td class="clickable-cell" data-question="28" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="28" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="28" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="28" data-value="D"></td>
+                                    <td class="clickable-cell" data-question="28" data-value="E"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>29.</strong> Cuba</td>
+                                    <td class="clickable-cell" data-question="29" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="29" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="29" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="29" data-value="D"></td>
+                                    <td class="clickable-cell" data-question="29" data-value="E"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>30.</strong> Venezuela</td>
+                                    <td class="clickable-cell" data-question="30" data-value="A"></td>
+                                    <td class="clickable-cell" data-question="30" data-value="B"></td>
+                                    <td class="clickable-cell" data-question="30" data-value="C"></td>
+                                    <td class="clickable-cell" data-question="30" data-value="D"></td>
+                                    <td class="clickable-cell" data-question="30" data-value="E"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-4" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 4</strong></p>
+                    <p>Listen and answer questions 31–40.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 31-36</strong></p>
+                            <p>Complete the notes.</p>
+                            <p>Use <strong>ONE WORD ONLY</strong> for each answer.</p>
+                        </div>
+                        <h4>PREDICTING VOLCANIC DISASTERS</h4>
+                        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                            <thead>
+                                <tr>
+                                    <th
+                                        style="padding:16px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Indicator</th>
+                                    <th
+                                        style="padding:16px; border:1px solid #ddd; text-align:left; background-color: #f8f9fa; font-weight: bold;">
+                                        Monitoring technique</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">
+                                        Hundreds of earthquakes caused
+                                        by magma colliding with
+                                        <input type="text" id="q31" class="answer-input" placeholder="31"
+                                            style="width: 120px;">
+                                    </td>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">Seismometers -
+                                        small devices to detect the
+                                        <input type="text" id="q32" class="answer-input" placeholder="32"
+                                            style="width: 120px;">of the ground and record the frequency of
+                                        earthquakes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">
+                                        Spikes in
+                                        <input type="text" id="q33" class="answer-input" placeholder="33"
+                                            style="width: 120px;">could warn of worrying levels of
+                                        volcanic activity
+
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">Visual
+                                        information is normally collected by
+                                        <input type="text" id="q34" class="answer-input" placeholder="34"
+                                            style="width: 120px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">
+                                        Changes in atmospheric
+                                        <input type="text" id="q35" class="answer-input" placeholder="35"
+                                            style="width: 120px;">
+                                        especially rises in gases, e.g. CO2 or sulphur.
+                                    </td>
+                                    <td style="padding:16px; border:1px solid #ddd; line-height: 2.0;">Gas samples are
+                                        collected and analysed
+                                        using a type of
+                                        <input type="text" id="q36" class="answer-input" placeholder="36"
+                                            style="width: 120px;">detector
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <h3>Preparing for disaster</h3>
+
+                        </div>
+                        <div style="border:1px solid #ccc; padding:15px; width: 800px; margin-top:20px;">
+
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Create a large enough:</span>
+                                <input type="text" id="q37" class="answer-input" placeholder="37"
+                                    style="margin-left: 10px;">zone around the volcano.
+                            </div>
+
+
+                            <div style="display: flex; align-items: flex-end; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Prepare for large-scale
+                                    evacuation, bearing in mind that important roads and
+                                    railway lines may become </span>
+                                <input type="text" id="q38" class="answer-input" placeholder="38"
+                                    style="margin-left: 10px;">
+                            </div>
+
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">Have the funds put aside to deal
+                                    with the emergency.
+                                    Ensure there’s a sophisticated way to inform people about</span>
+                                <!-- <input type="text" id="q3" class="answer-input" placeholder="3"
+                                    style="margin-left: 10px;"> -->
+                            </div>
+                            <ul style="margin: 5px 0 5px 20px; list-style-type: disc;">
+                                <li>the <input type="text" id="q39" class="answer-input" placeholder="39"
+                                        style="margin-left: 10px;"></li>
+                                <li>they face</li>
+                                <li>the response</li>
+
+                            </ul>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-weight: regular; margin-right: 10px;">People whose homes are at risk
+                                    from eruptions need to know</span>
+
+                            </div>
+                            <ul style="margin: 5px 0 5px 20px; list-style-type: disc;">
+                                <li>what to do in an emergency</li>
+                                <li>what essential <input type="text" id="q40" class="answer-input" placeholder="40"
+                                        style="margin-left: 10px;"></li>
+                                <li>to store in their homes in case of disaster</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./listening.js"></script>
+    
+    
+
+</body>
+
+</html>

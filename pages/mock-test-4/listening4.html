@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock-test-4</title>
+    <link rel="stylesheet" href="./listening4.css">
+   
+</head>
+<body>
+    
+    <div class="tabs-header">
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" data-part="1">Part 1</div>
+                <div class="tab" data-part="2">Part 2</div>
+                <div class="tab" data-part="3">Part 3</div>
+                <div class="tab" data-part="4">Part 4</div>
+            </div>
+            <span class="timer-display">30:00</span>
+            <div class="audio-timer-container">
+                <span id="audio-status" style="font-size:16px;color:#888;">Audio loading...</span>
+                <!-- <audio id="audio-player" src="../../audio/listening-2.mp3"></audio> -->
+                <audio id="audio-player" src="https://ia800901.us.archive.org/32/items/mix-27m-54s-audio-joiner.com-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-c/mix_27m54s%20%28audio-joiner.com%29%20-%20CopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopy.mp3"></audio>
+             
+                <button class="save-button" onclick="saveAsText()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            
+            <div id="part-1" class="question-part active">
+                <div class="part-header">
+                    <p><strong>Part 1</strong></p>
+                    <p>Listen and answer questions 1–10.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 1-5</strong></p>
+                            <p>Complete the table below. Write <strong>ONE WORD AND/OR A NUMBER</strong> for each answer.</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <p class="centered-title">MEGEQUIP CUSTOMER DETAILS</p>
+                            
+                            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; width: 30%;"><strong>Example</strong></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; width: 70%;"><strong>Answer</strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">Order from</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>winter catalogue</strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">Name</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;"><input type="text" id="q1" class="answer-input" placeholder="1" autocomplete="off"> Greening</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">Address</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;"><input type="text" id="q2" class="answer-input" placeholder="2" autocomplete="off"> York Terrace</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">Delivery address</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">5, York <input type="text" id="q3" class="answer-input" placeholder="3" autocomplete="off"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">Payment method</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;"><input type="text" id="q4" class="answer-input" placeholder="4" autocomplete="off"> in advance</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">Reason for discount</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">address within the <input type="text" id="q5" class="answer-input" placeholder="5" autocomplete="off"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 6-10</strong></p>
+                            <p>Complete the table below. Write <strong>NO MORE THAN ONE WORD AND/OR A NUMBER</strong> for each answer.</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <p class="centered-title">MEGEQUIP CUSTOMER ORDER</p>
+                            
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr style="background-color: #f8f9fa;">
+                                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Item</th>
+                                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Catalogue no.</th>
+                                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Catalogue section</th>
+                                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Colour</th>
+                                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Delivery notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">desk lamp</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">664</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;"><input type="text" id="q6" class="answer-input" placeholder="6" autocomplete="off"></td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">slate</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">customer will <input type="text" id="q7" class="answer-input" placeholder="7" autocomplete="off"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">chair</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">131</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">Home Office</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;"><input type="text" id="q8" class="answer-input" placeholder="8" autocomplete="off"></td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">our van</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">filling cabinet two drawers with <input type="text" id="q9" class="answer-input" placeholder="9" autocomplete="off"></td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">153</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">Commercial</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">grey</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">Direct from London to later than <input type="text" id="q10" class="answer-input" placeholder="10" autocomplete="off"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-2" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 2</strong></p>
+                    <p>Listen and answer questions 11–20.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 11-14</strong></p>
+                            <p>Choose <strong>TWO</strong> correct answers.</p><br>
+                            <p><strong>11-12</strong>&nbsp;&nbsp;Which TWO things make the museum unusual?</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 18px;">
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="q11-12" value="A"> the guides</label>
+                                <label><input type="checkbox" name="q11-12" value="B"> the events</label>
+                                <label><input type="checkbox" name="q11-12" value="C"> the animals</label>
+                                <label><input type="checkbox" name="q11-12" value="D"> the buildings</label>
+                                <label><input type="checkbox" name="q11-12" value="E"> the objects</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>13-14</strong>&nbsp;&nbsp;Which TWO things can visitors do at the museum?</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 18px;">
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="q13-14" value="A"> buy home-made bread</label>
+                                <label><input type="checkbox" name="q13-14" value="B"> ride a horse</label>
+                                <label><input type="checkbox" name="q13-14" value="C"> ride on a tram</label>
+                                <label><input type="checkbox" name="q13-14" value="D"> buy copies of original posters</label>
+                                <label><input type="checkbox" name="q13-14" value="E"> go down a coal mine</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 15-20</strong></p>
+                            <p>Label the map below.</p>
+                            <p>Write the correct letter A-I next to questions 15-20.</p>
+                        </div>
+                        
+                        <div style="margin-top: 12px;">
+                            <div style="display: flex; gap: 30px; align-items: flex-start;">
+                                <div class="map-container" style="flex: 1;">
+                                <img src="https://ieltstrainingonline.com/wp-content/uploads/2020/03/Test-4-Q15-20.jpg" alt="Museum Map for questions 15-20" style="width: 100%; max-width: 600px;">
+                                </div>
+                            
+                                <div style="flex: 1; margin-top: 0;">
+                                    <p><strong>15</strong>&nbsp;&nbsp;The exhibition centre <select id="q15" class="answer-input" style="width: 100px;">
+                                        <option value="">Select</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                    </select></p>
+                                
+                                    <p><strong>16</strong>&nbsp;&nbsp;The High Street <select id="q16" class="answer-input" style="width: 100px;">
+                                        <option value="">Select</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                    </select></p>
+                                
+                                    <p><strong>17</strong>&nbsp;&nbsp;The farmhouse <select id="q17" class="answer-input" style="width: 100px;">
+                                        <option value="">Select</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                    </select></p>
+                                
+                                    <p><strong>18</strong>&nbsp;&nbsp;The coal mine <select id="q18" class="answer-input" style="width: 100px;">
+                                        <option value="">Select</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                    </select></p>
+                                
+                                    <p><strong>19</strong>&nbsp;&nbsp;The Manor House <select id="q19" class="answer-input" style="width: 100px;">
+                                        <option value="">Select</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                    </select></p>
+                                
+                                    <p><strong>20</strong>&nbsp;&nbsp;The Railway Station <select id="q20" class="answer-input" style="width: 100px;">
+                                        <option value="">Select</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                    </select></p>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-3" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 3</strong></p>
+                    <p>Listen and answer questions 21–30.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 21 – 25</strong></p>
+                            <p>Choose the correct letter, A, B or C</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 18px;">
+                            <p><strong>21</strong>&nbsp;&nbsp;Why did James choose to work in the bakery?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q21" value="A"> Because it's close to his home.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q21" value="B"> Because it has a good reputation in the subject area.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q21" value="C"> Because it's a part of a chain.</label></div>
+                                    </div>
+                                
+                            <p><strong>22</strong>&nbsp;&nbsp;What was James surprised at in his studies?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q22" value="A"> He finds the theoretical courses easy.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q22" value="B"> He can finish the theoretical courses.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q22" value="C"> He finds the theoretical work interesting.</label></div>
+                                    </div>
+                                
+                            <p><strong>23</strong>&nbsp;&nbsp;How is James' course assessed in the first term?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q23" value="A"> The marks are given by students to each other.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q23" value="B"> Self-assessment.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q23" value="C"> It is up to the practical experience.</label></div>
+                                    </div>
+                                
+                            <p><strong>24</strong>&nbsp;&nbsp;Why has Kate enquired about the English language course?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q24" value="A"> She wants to become an artist.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q24" value="B"> It is her first language.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q24" value="C"> She plans to curate in a gallery.</label></div>
+                                    </div>
+                                
+                            <p><strong>25</strong>&nbsp;&nbsp;What else did Kate need to get before going to the college?</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q25" value="A"> starting date of the course</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q25" value="B"> an offer with scholarships</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q25" value="C"> a catalogue of modules</label></div>
+                                    </div>
+                        </div>
+                    </div>
+                        
+
+                        
+                    <div class="question">
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 26-30</strong></p>
+                            <p>What statement applies to each of the following courses?</p>
+                            <p>Choose FIVE answers from the box and write the correct letter, A-G, next to questions 26-30.</p>
+                        </div>
+                        
+                        <div style="margin-top: 12px;">
+                            <div class="matching-container">
+                                <div class="matching-questions">
+                                    <p style="font-weight: bold; margin-bottom: 15px;">Courses</p>
+                                    <p><strong>26</strong>&nbsp;&nbsp;History of Art</p>
+                                    <div class="drop-zone" data-question-id="26" data-question="26">
+                                        <span class="placeholder">Drop answer here</span>
+                            </div>
+
+                                    <p><strong>27</strong>&nbsp;&nbsp;Sculpture</p>
+                                    <div class="drop-zone" data-question-id="27" data-question="27">
+                                        <span class="placeholder">Drop answer here</span>
+                            </div>
+                                
+                                    <p><strong>28</strong>&nbsp;&nbsp;Digital Painting</p>
+                                    <div class="drop-zone" data-question-id="28" data-question="28">
+                                        <span class="placeholder">Drop answer here</span>
+                        </div>
+                                
+                                    <p><strong>29</strong>&nbsp;&nbsp;Art Theory</p>
+                                    <div class="drop-zone" data-question-id="29" data-question="29">
+                                        <span class="placeholder">Drop answer here</span>
+                    </div>
+
+                                    <p><strong>30</strong>&nbsp;&nbsp;Photography</p>
+                                    <div class="drop-zone" data-question-id="30" data-question="30">
+                                        <span class="placeholder">Drop answer here</span>
+                        </div>
+                        
+                                    <!-- Hidden inputs to store answers -->
+                                    <input type="hidden" id="q26" value="">
+                                    <input type="hidden" id="q27" value="">
+                                    <input type="hidden" id="q28" value="">
+                                    <input type="hidden" id="q29" value="">
+                                    <input type="hidden" id="q30" value="">
+                                </div>
+
+                                <div class="matching-options-list" id="part3-options-box">
+                                    <p style="font-weight: bold; margin-bottom: 15px;">Statements</p>
+                                    <div class="drag-item" data-letter="A" draggable="true">A There are a lot of background readings.</div>
+                                    <div class="drag-item" data-letter="B" draggable="true">B People stay at the studio where the course is taken.</div>
+                                    <div class="drag-item" data-letter="C" draggable="true">C Many outside speakers will give a talk.</div>
+                                    <div class="drag-item" data-letter="D" draggable="true">D It's the most difficult course.</div>
+                                    <div class="drag-item" data-letter="E" draggable="true">E Students do their own research.</div>
+                                    <div class="drag-item" data-letter="F" draggable="true">F Students need to spend a lot of money on a camera with a good display.</div>
+                                    <div class="drag-item" data-letter="G" draggable="true">G Expensive materials need to be bought.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part-4" class="question-part hidden">
+                <div class="part-header">
+                    <p><strong>Part 4</strong></p>
+                    <p>Listen and answer questions 31–40.</p>
+                </div>
+                <div class="questions-container">
+                    <div class="question">
+                        <div class="question-prompt">
+                            <p><strong>Questions 31-33</strong></p>
+                            <p>Complete the notes below. Write <strong>ONE WORD ONLY</strong> for each answer.</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <p class="centered-title">The Tiger Shark</p>
+                            
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li style="margin-bottom: 8px;">Origin of name: its dark bands</li>
+                                <li style="margin-bottom: 8px;">Size: 6.5 metres (maximum)</li>
+                                <li style="margin-bottom: 8px;">Preferred habitat: near to the <input type="text" id="q31" class="answer-input" placeholder="31" autocomplete="off"></li>
+                                <li style="margin-bottom: 8px;">Typical food: other sea creatures but also <input type="text" id="q32" class="answer-input" placeholder="32" autocomplete="off"> produced by humans</li>
+                                <li style="margin-bottom: 8px;">Paine Island area: studies show tiger sharks are mainly found here during the <input type="text" id="q33" class="answer-input" placeholder="33" autocomplete="off"> (when turtles are nesting)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 34-38</strong></p>
+                            <p>Complete the notes below. Write <strong>ONE WORD ONLY</strong> for each answer.</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <p class="centered-title">Shark Tagging Process</p>
+                            
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li style="margin-bottom: 8px;">Pieces of <input type="text" id="q34" class="answer-input" placeholder="34" autocomplete="off"> were attached to lines as bait</li>
+                                <li style="margin-bottom: 8px;">The lines were <input type="text" id="q35" class="answer-input" placeholder="35" autocomplete="off"> regularly.</li>
+                                <li style="margin-bottom: 8px;">The hooked shark was brought to the <input type="text" id="q36" class="answer-input" placeholder="36" autocomplete="off"> and secured.</li>
+                                <li style="margin-bottom: 8px;">The shark was measured and tagged, and tissue removed for research.</li>
+                                <li style="margin-bottom: 8px;">Large sharks: an acoustic tag was fitted or a <input type="text" id="q37" class="answer-input" placeholder="37" autocomplete="off"> was attached.</li>
+                                <li style="margin-bottom: 8px;">The shark was <input type="text" id="q38" class="answer-input" placeholder="38" autocomplete="off"> and could be tracked.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-prompt" style="margin-top: 40px;">
+                            <p><strong>Questions 39 and 40</strong></p>
+                            <p>Choose the correct answer.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 18px;">
+                            <p><strong>39</strong>&nbsp;&nbsp;The purpose of the research was to understand the tiger sharks</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q39" value="A"> reproductive patterns.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q39" value="B"> migration patterns.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q39" value="C"> feeding patterns.</label></div>
+                            </div>
+
+                            <p><strong>40</strong>&nbsp;&nbsp;Observations showed that, in general, tiger sharks</p>
+                            <div class="multi-choice-question">
+                                <div class="multi-choice-option"><label><input type="radio" name="q40" value="A"> change depths frequently.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q40" value="B"> usually avoid the surface of the water.</label></div>
+                                <div class="multi-choice-option"><label><input type="radio" name="q40" value="C"> often spend long periods on the ocean floor.</label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     
+
+
+    
+    <script src="./listening4.js"></script>
+    <!-- <script>
+
+        let currentPart = 1;
+        let currentQuestion = 1;
+        let selectedText = '';
+        let selectedRange = null;
+        let draggedElement = null;
+        let testStarted = false;
+        let timeInSeconds = 3600;
+        let isHovering = false;
+        let timerInterval;
+        let contextElement = null;
+
+        function updateAnsweredIndicators() {
+            for (let qNum = 1; qNum <= 40; qNum++) {
+                const btn = document.querySelector(`.subQuestion[onclick="goToQuestion(${qNum})"]`);
+                if (!btn) continue;
+
+                // Do not change style if it's already marked correct or incorrect
+                if (btn.classList.contains('correct') || btn.classList.contains('incorrect')) {
+                    continue;
+                }
+
+                let isAnswered = false;
+                const textInput = document.getElementById(`q${qNum}`);
+                const radioInput = document.querySelector(`input[name="q${qNum}"]:checked`);
+                const dropZone = document.querySelector(`.drop-zone[data-question-id="${qNum}"]`);
+                const clickableCell = document.querySelector(`.clickable-cell[data-question="${qNum}"].selected`);
+
+                // Check for checkbox questions with multiple answer requirements
+                // Questions 11-12: group name q11-12, choose TWO
+                if (qNum === 11) {
+                    const checkboxes = document.querySelectorAll('input[name="q11-12"]:checked');
+                    if (checkboxes.length >= 1) { isAnswered = true; }
+                } else if (qNum === 12) {
+                    const checkboxes = document.querySelectorAll('input[name="q11-12"]:checked');
+                    if (checkboxes.length >= 2) { isAnswered = true; }
+                // Questions 13-14: group name q13-14, choose TWO
+                } else if (qNum === 13) {
+                    const checkboxes = document.querySelectorAll('input[name="q13-14"]:checked');
+                    if (checkboxes.length >= 1) { isAnswered = true; }
+                } else if (qNum === 14) {
+                    const checkboxes = document.querySelectorAll('input[name="q13-14"]:checked');
+                    if (checkboxes.length >= 2) { isAnswered = true; }
+                } else if (textInput && typeof textInput.value === 'string' && textInput.value.trim() !== '') {
+                    isAnswered = true;
+                } else if (radioInput) {
+                    isAnswered = true;
+                    if (qNum >= 17 && qNum <= 20) {
+                        console.log(`Question ${qNum} radio detected as answered: ${radioInput.value}`);
+                    }
+                } else if (dropZone && dropZone.querySelector('.drag-item')) {
+                    isAnswered = true;
+                } else if (clickableCell) {
+                    isAnswered = true;
+                    if (qNum >= 13 && qNum <= 16 || qNum >= 25 && qNum <= 30) {
+                        console.log(`Question ${qNum} clickable cell detected as answered: ${clickableCell.getAttribute('data-value')}`);
+                        console.log(`Clickable cell element:`, clickableCell);
+                    }
+                }
+
+                if (isAnswered) {
+                    btn.classList.add('answered');
+                } else {
+                    btn.classList.remove('answered');
+                }
+            }
+            // Keep attempted count in sync with latest interactions
+            updateAttemptedCount(currentPart);
+        }
+
+        const audioPlayer = document.getElementById('global-audio-player');
+        const timerContainer = document.querySelector('.timer-container');
+        const timerDisplay = document.querySelector('.timer-display');
+        const volumeSlider = document.getElementById('new-volume-slider');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const totalDurationEl = document.getElementById('total-duration');
+        const speedBtn = document.getElementById('speed-btn');
+        const speedOptions = document.getElementById('speed-options');
+        const volumeBtn = document.getElementById('volume-btn');
+
+        const audioSource = 'https://ia800901.us.archive.org/32/items/mix-27m-54s-audio-joiner.com-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-c/mix_27m54s%20%28audio-joiner.com%29%20-%20CopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopyCopy.mp3';
+        audioPlayer.src = audioSource;
+
+
+
+                    function setupCheckboxLimits() {
+                const groupsWithLimits = [
+                    { name: 'q11-12', max: 2 }, // Questions 11-12: choose TWO
+                    { name: 'q13-14', max: 2 }, // Questions 13-14: choose TWO
+                ];
+
+            groupsWithLimits.forEach(({ name, max }) => {
+                const checkboxes = Array.from(document.querySelectorAll(`input[type="checkbox"][name="${name}"]`));
+                if (checkboxes.length === 0) return;
+
+                const applyLimitState = () => {
+                    const checkedCount = checkboxes.filter(c => c.checked).length;
+                    if (checkedCount >= max) {
+                        // Disable all remaining unchecked options when limit reached
+                        checkboxes.forEach(c => { if (!c.checked) c.disabled = true; });
+                    } else {
+                        // Re-enable options when below limit
+                        checkboxes.forEach(c => { c.disabled = false; });
+                    }
+                    updateAnsweredIndicators();
+                };
+
+                checkboxes.forEach(cb => {
+                    cb.addEventListener('change', applyLimitState);
+                });
+
+                // Initialize on load
+                applyLimitState();
+            });
+        }
+
+        // Ensure checkbox limits are applied once the DOM is ready
+        document.addEventListener('DOMContentLoaded', setupCheckboxLimits);
+
+        // Test function to verify clickable cells are working
+        function testClickableCells() {
+            console.log('Testing clickable cells...');
+            const cells = document.querySelectorAll('.clickable-cell');
+            console.log(`Found ${cells.length} clickable cells`);
+            cells.forEach((cell, index) => {
+                const question = cell.getAttribute('data-question');
+                const value = cell.getAttribute('data-value');
+                const onclick = cell.getAttribute('onclick');
+                console.log(`Cell ${index}: question=${question}, value=${value}, onclick=${onclick}`);
+            });
+        }
+        
+        function selectCell(cell, questionNumber, value) {
+            try {
+                console.log(`selectCell called: question ${questionNumber}, value ${value}`);
+                console.log('Cell element:', cell);
+                console.log('Cell classes:', cell.className);
+                console.log('Cell data-question:', cell.getAttribute('data-question'));
+                console.log('Cell data-value:', cell.getAttribute('data-value'));
+                
+                // Remove previous selection for this question
+                const row = cell.closest('tr');
+                if (!row) {
+                    console.error('Could not find row for cell');
+                    return;
+                }
+                
+                const cells = row.querySelectorAll('.clickable-cell');
+                console.log(`Found ${cells.length} clickable cells in row`);
+                cells.forEach(c => {
+                    c.classList.remove('selected');
+                    console.log(`Removed 'selected' class from cell with value: ${c.getAttribute('data-value')}`);
+                });
+                
+                // Select the clicked cell
+                cell.classList.add('selected');
+                console.log(`Added 'selected' class to cell with value: ${value}`);
+                console.log('Cell classes after selection:', cell.className);
+                
+                // Store the answer in the hidden input
+                const hiddenInput = document.getElementById(`q${questionNumber}`);
+                if (hiddenInput) {
+                    hiddenInput.value = value;
+                    console.log(`Hidden input q${questionNumber} value set to: ${value}`);
+                } else {
+                    console.error(`Hidden input q${questionNumber} not found`);
+                }
+
+                // Update answered indicators
+                updateAnsweredIndicators();
+                
+                // Force a visual update
+                cell.style.display = 'none';
+                cell.offsetHeight; // Force reflow
+                cell.style.display = '';
+                
+            } catch (error) {
+                console.error('Error in selectCell:', error);
+            }
+        }
+
+        function switchToPart(partNumber, andPlay = false) {
+            if (currentPart !== partNumber) {
+                const firstQuestionOfPart = (partNumber - 1) * 10 + 1;
+                currentQuestion = firstQuestionOfPart;
+            }
+            
+            currentPart = partNumber;
+
+            updateNavigation();
+            document.querySelectorAll('.question-part').forEach(part => part.classList.add('hidden'));
+            const partToShow = document.getElementById(`part-${partNumber}`);
+            if (partToShow) {
+                partToShow.classList.remove('hidden');
+            }
+
+            if (document.querySelector('.main-container.results-mode')) {
+                const transcriptionSource = document.querySelector(`#transcription-data [data-part="${partNumber}"]`);
+                const transcriptionTarget = document.getElementById('transcription-text');
+                if (transcriptionSource && transcriptionTarget) {
+                    transcriptionTarget.innerHTML = transcriptionSource.innerHTML;
+                }
+            }
+
+            updateNavigation();
+        }
+
+        function updateNavigation() {
+            document.querySelectorAll('.footer__questionWrapper___1tZ46').forEach((wrapper, index) => {
+                wrapper.classList.remove('selected');
+                updateAttemptedCount(index + 1);
+            });
+            const currentWrapper = document.querySelectorAll('.footer__questionWrapper___1tZ46')[currentPart - 1];
+            if (currentWrapper) {
+                currentWrapper.classList.add('selected');
+            }
+            document.getElementById('prevBtn').disabled = currentQuestion === 1;
+            document.getElementById('nextBtn').disabled = currentQuestion === 40;
+        }
+
+        function goToQuestion(questionNumber) {
+            currentQuestion = questionNumber;
+            let partNumber = 1;
+            if (questionNumber > 10 && questionNumber <= 20) partNumber = 2;
+            else if (questionNumber > 20 && questionNumber <= 30) partNumber = 3;
+            else if (questionNumber > 30) partNumber = 4;
+            if (currentPart !== partNumber) {
+                switchToPart(partNumber);
+            }
+            document.querySelectorAll('.subQuestion').forEach(btn => btn.classList.remove('active'));
+            const questionBtn = document.querySelector(`.subQuestion[onclick="goToQuestion(${questionNumber})"]`);
+            if (questionBtn) questionBtn.classList.add('active');
+
+            // Scroll to the question
+            let questionElement;
+            if (questionNumber >= 27 && questionNumber <= 28) {
+               questionElement = document.querySelector('input[name="q27-28"]');
+            } else if (questionNumber >= 29 && questionNumber <= 30) {
+               questionElement = document.querySelector('input[name="q29-30"]');
+            } else {
+                questionElement = document.getElementById(`q${questionNumber}`) || // text inputs
+                                document.querySelector(`[data-question-id="${questionNumber}"]`) || // drag-drop
+                                document.querySelector(`input[name="q${questionNumber}"]`) || // radio buttons
+                                document.querySelector(`.clickable-cell[data-question="${questionNumber}"]`); // clickable cells (27-30)
+            }
+            
+            if (questionElement) {
+                const questionContainer = questionElement.closest('.question');
+                if(questionContainer) {
+                    questionContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    questionContainer.classList.add('flash');
+                    setTimeout(() => {
+                        questionContainer.classList.remove('flash');
+                    }, 1000);
+                }
+            }
+            updateNavigation();
+        }
+
+        function nextPart() {
+            if (currentQuestion < 40) {
+                goToQuestion(currentQuestion + 1);
+            }
+        }
+
+        function previousPart() {
+            if (currentQuestion > 1) {
+                goToQuestion(currentQuestion - 1);
+            }
+        }
+
+        function highlightText() {
+            if (!selectedRange || selectedRange.collapsed) {
+                closeContextMenu();
+                return;
+            }
+            
+            try {
+                // Check if selection spans multiple elements
+                const startContainer = selectedRange.startContainer;
+                const endContainer = selectedRange.endContainer;
+                
+                if (startContainer === endContainer && startContainer.nodeType === Node.TEXT_NODE) {
+                    // Simple case: selection within a single text node
+                    const span = document.createElement('span');
+                    span.className = 'highlight';
+                    selectedRange.surroundContents(span);
+                } else {
+                    // Complex case: selection spans multiple elements
+                    // Handle partial text selections and complex DOM structures
+                    
+                    // First, handle partial text at the start
+                    const startOffset = selectedRange.startOffset;
+                    const endOffset = selectedRange.endOffset;
+                    
+                    if (startContainer.nodeType === Node.TEXT_NODE && startOffset > 0) {
+                        // Split the start text node if selection starts in the middle
+                        const startText = startContainer.textContent;
+                        const beforeText = startText.substring(0, startOffset);
+                        const selectedStartText = startText.substring(startOffset);
+                        
+                        const beforeNode = document.createTextNode(beforeText);
+                        const selectedNode = document.createTextNode(selectedStartText);
+                        
+                        const parent = startContainer.parentNode;
+                        parent.insertBefore(beforeNode, startContainer);
+                        parent.insertBefore(selectedNode, startContainer);
+                        parent.removeChild(startContainer);
+                        
+                        // Update the range to start from the new node
+                        selectedRange.setStart(selectedNode, 0);
+                    }
+                    
+                    if (endContainer.nodeType === Node.TEXT_NODE && endOffset < endContainer.textContent.length) {
+                        // Split the end text node if selection ends in the middle
+                        const endText = endContainer.textContent;
+                        const selectedEndText = endText.substring(0, endOffset);
+                        const afterText = endText.substring(endOffset);
+                        
+                        const selectedNode = document.createTextNode(selectedEndText);
+                        const afterNode = document.createTextNode(afterText);
+                        
+                        const parent = endContainer.parentNode;
+                        parent.insertBefore(selectedNode, endContainer);
+                        parent.insertBefore(afterNode, endContainer);
+                        parent.removeChild(endContainer);
+                        
+                        // Update the range to end at the new node
+                        selectedRange.setEnd(selectedNode, selectedNode.textContent.length);
+                    }
+                    
+                    // Now extract the contents and highlight all text nodes
+                    const fragment = selectedRange.extractContents();
+                    
+                    // Create a tree walker to find all text nodes
+                    const walker = document.createTreeWalker(
+                        fragment,
+                        NodeFilter.SHOW_TEXT,
+                        {
+                            acceptNode: function(node) {
+                                // Accept text nodes that have content (not just whitespace)
+                                return node.textContent.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+                            }
+                        },
+                        false
+                    );
+                    
+                    const textNodes = [];
+                    let node;
+                    while (node = walker.nextNode()) {
+                        textNodes.push(node);
+                    }
+                    
+                    // Wrap each text node in a highlight span
+                    textNodes.forEach(textNode => {
+                        const span = document.createElement('span');
+                        span.className = 'highlight';
+                        const parent = textNode.parentNode;
+                        if (parent) {
+                            parent.insertBefore(span, textNode);
+                            span.appendChild(textNode);
+                        }
+                    });
+                    
+                    // Insert the highlighted fragment back
+                    selectedRange.insertNode(fragment);
+                }
+            } catch(err) {
+                console.warn('Primary highlighting failed, trying robust fallback:', err);
+                
+                // Robust fallback for complex selections
+                try {
+                    const selection = window.getSelection();
+                    if (selection.rangeCount > 0) {
+                        const range = selection.getRangeAt(0);
+                        
+                        // Get all nodes in the selection
+                        const startContainer = range.startContainer;
+                        const endContainer = range.endContainer;
+                        const commonAncestor = range.commonAncestorContainer;
+                        
+                        // Create a temporary range to work with
+                        const tempRange = document.createRange();
+                        tempRange.selectNodeContents(commonAncestor);
+                        
+                        // Find the start and end positions
+                        const startPos = range.startOffset;
+                        const endPos = range.endOffset;
+                        
+                        // Extract and highlight the content
+                        const contents = range.extractContents();
+                        
+                        // Recursively highlight all text content
+                        function highlightAllText(node) {
+                            if (node.nodeType === Node.TEXT_NODE) {
+                                if (node.textContent.trim()) {
+                                    const span = document.createElement('span');
+                                    span.className = 'highlight';
+                                    span.style.backgroundColor = '#ffff00';
+                                    const parent = node.parentNode;
+                                    if (parent) {
+                                        parent.insertBefore(span, node);
+                                        span.appendChild(node);
+                                    }
+                                }
+                            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                                Array.from(node.childNodes).forEach(child => {
+                                    highlightAllText(child);
+                                });
+                            }
+                        }
+                        
+                        highlightAllText(contents);
+                        range.insertNode(contents);
+                    }
+                } catch(e2) {
+                    console.warn('Robust fallback failed, using final method:', e2);
+                    // Final fallback - use execCommand
+                    try {
+                        document.execCommand('backColor', false, 'yellow');
+                    } catch(e3) {
+                        console.error('All highlighting methods failed:', e3);
+                        // Show user feedback
+                        alert('Highlighting failed for this selection. Please try selecting smaller portions of text.');
+                    }
+                }
+            }
+            
+            window.getSelection().removeAllRanges();
+            closeContextMenu();
+        }
+
+        function addComment() {
+            const commentText = prompt('Enter your comment:');
+            if (!commentText || !selectedRange || selectedRange.collapsed) {
+                closeContextMenu();
+                return;
+            }
+            try {
+                const span = document.createElement('span');
+                span.className = 'comment-highlight';
+                const tooltip = document.createElement('span');
+                tooltip.className = 'comment-tooltip';
+                tooltip.textContent = commentText;
+                span.appendChild(tooltip);
+                selectedRange.surroundContents(span);
+            }catch(err){
+                console.warn('Complex selection – cannot comment');
+            }
+            window.getSelection().removeAllRanges();
+            closeContextMenu();
+        }
+
+        function clearHighlight() {
+           const elementToClear = contextElement;
+           if (!elementToClear) {
+               closeContextMenu();
+               return;
+           }
+           const parent = elementToClear.parentNode;
+           
+           while (elementToClear.firstChild) {
+               if (!elementToClear.firstChild.classList?.contains('comment-tooltip')) {
+                   parent.insertBefore(elementToClear.firstChild, elementToClear);
+               } else {
+                   elementToClear.removeChild(elementToClear.firstChild);
+               }
+           }
+           parent.removeChild(elementToClear);
+           parent.normalize();
+           closeContextMenu();
+        }
+
+        function clearAllHighlights() {
+            document.querySelectorAll('.highlight, .comment-highlight').forEach(element => {
+                const parent = element.parentNode;
+                const fragment = document.createDocumentFragment();
+
+                while (element.firstChild) {
+                    if (element.firstChild.nodeType === 1 && element.firstChild.classList.contains('comment-tooltip')) {
+                        element.removeChild(element.firstChild);
+                    } else {
+                        fragment.appendChild(element.firstChild);
+                    }
+                }
+                parent.replaceChild(fragment, element);
+            });
+            closeContextMenu();
+        }
+        
+        function closeContextMenu() {
+            document.getElementById('contextMenu').style.display = 'none';
+            contextElement = null;
+        }
+
+        function updateAttemptedCount(partNumber) {
+            const partContainer = document.getElementById(`part-${partNumber}`);
+            if (!partContainer) return;
+            const inputs = partContainer.querySelectorAll('input.answer-input:not([disabled]):not([type="hidden"]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled])');
+            let answeredCount = 0;
+            const answeredGroups = {};
+            inputs.forEach(input => {
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    if (input.name === 'q11-12') {
+                        const checkedCount = partContainer.querySelectorAll('input[name="q11-12"]:checked').length;
+                        // Represent q11 and q12 as two separate questions in the footer count
+                        // Count 1 if at least one selected, and +1 again if two selected
+                        const keyFirst = 'q11-12-first';
+                        const keySecond = 'q11-12-second';
+                        if (checkedCount >= 1 && !answeredGroups[keyFirst]) {
+                            answeredCount++;
+                            answeredGroups[keyFirst] = true;
+                        }
+                        if (checkedCount >= 2 && !answeredGroups[keySecond]) {
+                            answeredCount++;
+                            answeredGroups[keySecond] = true;
+                        }
+                    } else if (input.name === 'q13-14') {
+                        const checkedCount = partContainer.querySelectorAll('input[name="q13-14"]:checked').length;
+                        // Represent q13 and q14 as two separate questions in the footer count
+                        // Count 1 if at least one selected, and +1 again if two selected
+                        const keyFirst = 'q13-14-first';
+                        const keySecond = 'q13-14-second';
+                        if (checkedCount >= 1 && !answeredGroups[keyFirst]) {
+                            answeredCount++;
+                            answeredGroups[keyFirst] = true;
+                        }
+                        if (checkedCount >= 2 && !answeredGroups[keySecond]) {
+                            answeredCount++;
+                            answeredGroups[keySecond] = true;
+                        }
+                    } else if (input.name === 'q28-30') {
+                        const checkedCount = partContainer.querySelectorAll('input[name="q28-30"]:checked').length;
+                        // Represent q28, q29, and q30 as three separate questions in the footer count
+                        const keyFirst = 'q28-30-first';
+                        const keySecond = 'q28-30-second';
+                        const keyThird = 'q28-30-third';
+                        if (checkedCount >= 1 && !answeredGroups[keyFirst]) {
+                            answeredCount++;
+                            answeredGroups[keyFirst] = true;
+                        }
+                        if (checkedCount >= 2 && !answeredGroups[keySecond]) {
+                            answeredCount++;
+                            answeredGroups[keySecond] = true;
+                        }
+                        if (checkedCount >= 3 && !answeredGroups[keyThird]) {
+                            answeredCount++;
+                            answeredGroups[keyThird] = true;
+                        }
+                    } else if (input.name === 'q31-32') {
+                        const checkedCount = partContainer.querySelectorAll('input[name="q31-32"]:checked').length;
+                        // Represent q31 and q32 as two separate questions in the footer count
+                        const keyFirst = 'q31-32-first';
+                        const keySecond = 'q31-32-second';
+                        if (checkedCount >= 1 && !answeredGroups[keyFirst]) {
+                            answeredCount++;
+                            answeredGroups[keyFirst] = true;
+                        }
+                        if (checkedCount >= 2 && !answeredGroups[keySecond]) {
+                            answeredCount++;
+                            answeredGroups[keySecond] = true;
+                        }
+                    } else if (input.checked && !answeredGroups[input.name]) {
+                        answeredCount++;
+                        answeredGroups[input.name] = true;
+                    }
+                } else {
+                    if (input.value.trim() !== '') answeredCount++;
+                }
+            });
+            // Include drag/drop filled zones as answered
+            const zones = partContainer.querySelectorAll('.drop-zone[data-question-id]');
+            zones.forEach(zone => {
+                if (zone.querySelector('.drag-item')) {
+                    answeredCount++;
+                }
+            });
+            
+            // Include clickable cells as answered
+            const clickableCells = partContainer.querySelectorAll('.clickable-cell.selected');
+            clickableCells.forEach(cell => {
+                const questionNum = cell.getAttribute('data-question');
+                if (questionNum && !answeredGroups[`clickable-${questionNum}`]) {
+                    answeredCount++;
+                    answeredGroups[`clickable-${questionNum}`] = true;
+                }
+            });
+            
+            // Include map questions (15-20) as answered if they have a selection
+            for (let i = 15; i <= 20; i++) {
+                const selectElement = partContainer.querySelector(`#q${i}`);
+                if (selectElement && selectElement.value && selectElement.value !== '' && !answeredGroups[`map-${i}`]) {
+                    answeredCount++;
+                    answeredGroups[`map-${i}`] = true;
+                }
+            }
+            const countDisplay = document.querySelector(`.footer__questionWrapper___1tZ46:nth-child(${partNumber}) .attemptedCount`);
+            if (countDisplay) countDisplay.textContent = `${answeredCount} of 10`;
+        }
+
+        // === Answer key and question type mapping ===
+        const correctAnswers = {
+            // Part 1
+            q1: 'Oskar',
+            q2: '52C',
+            q3: 'Avenue',
+            q4: 'cash',
+            q5: 'city',
+            // Part 1 table
+            q6: 'Living',
+            q7: 'collect',
+            q8: 'green',
+            q9: 'lock',
+            q10: ['3rd October', '3 October', 'October 3'],
+            // Part 2 checkbox groups
+            'q11-12': ['A','D'],
+            'q13-14': ['C','E'],
+            // Part 2 map (selects)
+            q15: 'E',
+            q16: 'A',
+            q17: 'C',
+            q18: 'H',
+            q19: 'F',
+            q20: 'B',
+            // Part 3 MCQ
+            q21: 'B',
+            q22: 'B',
+            q23: 'A',
+            q24: 'C',
+            q25: 'C',
+            // Part 3 Matching (drag & drop letters)
+            q26: 'C',
+            q27: 'G',
+            q28: 'B',
+            q29: 'E',
+            q30: 'F',
+            // Part 4 text
+            q31: 'coast',
+            q32: 'garbage',
+            q33: 'summer',
+            q34: 'fish',
+            q35: 'checked',
+            q36: 'boat',
+            q37: 'camera',
+            q38: 'released',
+            // Part 4 MCQ
+            q39: 'B',
+            q40: 'A'
+        };
+
+        const questionTypes = {
+            // Part 1
+            q1: 'text', q2: 'text', q3: 'text', q4: 'text', q5: 'text',
+            q6: 'text', q7: 'text', q8: 'text', q9: 'text', q10: 'text',
+            // Part 2
+            'q11-12': 'checkbox', 'q13-14': 'checkbox',
+            q15: 'mcq', q16: 'mcq', q17: 'mcq', q18: 'mcq', q19: 'mcq', q20: 'mcq',
+            // Part 3
+            q21: 'mcq', q22: 'mcq', q23: 'mcq', q24: 'mcq', q25: 'mcq',
+            q26: 'dragdrop', q27: 'dragdrop', q28: 'dragdrop', q29: 'dragdrop', q30: 'dragdrop',
+            // Part 4
+            q31: 'text', q32: 'text', q33: 'text', q34: 'text', q35: 'text', q36: 'text', q37: 'text', q38: 'text',
+            q39: 'mcq', q40: 'mcq'
+        };
+
+        function checkAnswers() {
+            let score = 0;
+            let resultsData = [];
+            document.querySelectorAll('.correct, .incorrect, .correct-answer-text, .correct-inline').forEach(el => {
+                if (el.classList.contains('correct-answer-text') || el.classList.contains('correct-inline')) {
+                    el.remove();
+                } else {
+                    el.classList.remove('correct', 'incorrect');
+                }
+            });
+            
+            Object.keys(correctAnswers).forEach(key => {
+                const correctAnswer = correctAnswers[key];
+                let userAnswer = '';
+                let isCorrect = false;
+                const questionType = questionTypes[key];
+                
+                // Handle different question types
+                if (key.includes('-')) {
+                    // Multi-question keys like 'q11-12', 'q13-14'
+                    const [startQ, endQ] = key.split('-').map(q => parseInt(q.replace('q', '')));
+                    
+                    switch(questionType) {
+                        case 'checkbox':
+                            const checkedBoxes = document.querySelectorAll(`input[name="${key}"]:checked`);
+                            const userAnswers = Array.from(checkedBoxes).map(cb => cb.value).sort();
+                            userAnswer = userAnswers.join(', ');
+                            const correctAnswersSorted = Array.isArray(correctAnswer) ? [...correctAnswer].sort() : [correctAnswer];
+                            
+                            // Count how many correct answers the user selected
+                            const correctUserAnswers = userAnswers.filter(ans => correctAnswersSorted.includes(ans));
+                            
+                            // Additive-only scoring: 1 point per correct selected; no penalty for incorrect
+                            const questionScore = correctUserAnswers.length;
+                            score += questionScore;
+                            
+                            // Mark group as fully correct only if all correct options are selected and no extra are selected
+                            isCorrect = (correctUserAnswers.length === correctAnswersSorted.length && userAnswers.length === correctAnswersSorted.length);
+                            
+                            // Mark individual checkboxes
+                            checkedBoxes.forEach(cb => {
+                                const label = cb.closest('label');
+                                if (label) {
+                                    if (correctAnswersSorted.includes(cb.value)) {
+                                        label.classList.add('correct');
+                                    } else {
+                                        label.classList.add('incorrect');
+                                    }
+                                }
+                            });
+                            
+                            // Mark correct answers that weren't selected
+                            correctAnswersSorted.forEach(correctVal => {
+                                const correctCheckbox = document.querySelector(`input[name="${key}"][value="${correctVal}"]`);
+                                if (correctCheckbox && !correctCheckbox.checked) {
+                                    const correctLabel = correctCheckbox.closest('label');
+                                    if (correctLabel) {
+                                        correctLabel.classList.add('correct');
+                                    }
+                                }
+                            });
+                            break;
+                    }
+                    
+                    // Mark buttons for the question range
+                    for (let qNum = startQ; qNum <= endQ; qNum++) {
+                        const btn = document.querySelector(`.subQuestion[onclick="goToQuestion(${qNum})"]`);
+                        if (btn) {
+                            btn.classList.remove('answered');
+                            btn.classList.add(isCorrect ? 'correct' : 'incorrect');
+                        }
+                    }
+                    
+                    resultsData.push({
+                        question: `${startQ}-${endQ}`,
+                        userAnswer: userAnswer || 'No Answer',
+                        correctAnswer: Array.isArray(correctAnswer) ? correctAnswer.join(', ') : String(correctAnswer),
+                        isCorrect: isCorrect
+                    });
+                    
+                    // For checkbox questions in multi-question keys, score was already added in switch statement
+                    // Don't add additional score here - return to next iteration of forEach
+                    return;
+                }
+                
+                   const qNum = parseInt(key.replace('q', ''));
+                   const btn = document.querySelector(`.subQuestion[onclick="goToQuestion(${qNum})"]`);
+                   const element = document.getElementById(key) || document.querySelector(`input[name="${key}"]`);
+
+                   // Determine question type: prefer explicit mapping over DOM input type
+                   if (!questionType) {
+                       if (element?.type === 'radio') questionType = 'mcq';
+                       else if (element?.type === 'text') questionType = 'text';
+                   }
+                   
+                    switch (questionType) {
+                       case 'text':
+                           userAnswer = element.value.trim();
+                           const acceptedAnswers = Array.isArray(correctAnswer) ? correctAnswer : [String(correctAnswer)];
+                           isCorrect = acceptedAnswers.some(ans => ans.toLowerCase() === userAnswer.toLowerCase());
+                           element.classList.add(isCorrect ? 'correct' : 'incorrect');
+                           if (!isCorrect) {
+                                const correctAnswerSpan = document.createElement('span');
+                                correctAnswerSpan.className = 'correct-inline';
+                                correctAnswerSpan.textContent = acceptedAnswers[0];
+                                element.insertAdjacentElement('afterend', correctAnswerSpan);
+                           }
+                           break;
+                        case 'mcq':
+                            // For map questions (15-20), use the select dropdown selection instead of radios
+                            if (qNum >= 15 && qNum <= 20) {
+                                const selectElement = document.getElementById(key);
+                                if (selectElement) {
+                                    userAnswer = (selectElement.value || '').trim();
+                                    isCorrect = userAnswer === correctAnswer;
+                                    selectElement.classList.add(isCorrect ? 'correct' : 'incorrect');
+                                    if (!isCorrect) {
+                                        const correctAnswerSpan = document.createElement('span');
+                                        correctAnswerSpan.className = 'correct-inline';
+                                        correctAnswerSpan.textContent = String(correctAnswer);
+                                        selectElement.insertAdjacentElement('afterend', correctAnswerSpan);
+                                    }
+                                    break;
+                                }
+                            }
+
+                            // Default MCQ grading via radio inputs
+                            const radioChecked = document.querySelector(`input[name="${key}"]:checked`);
+                            userAnswer = radioChecked ? radioChecked.value : 'No Answer';
+                            isCorrect = userAnswer === correctAnswer;
+                            const radios = document.querySelectorAll(`input[name="${key}"]`);
+                            radios.forEach(radio => {
+                                const label = radio.closest('label');
+                                const wrapper = radio.closest('.multi-choice-option') || label;
+                                if (radio.value === correctAnswer) {
+                                    wrapper.classList.add('correct');
+                                } else if (radio.checked) {
+                                    wrapper.classList.add('incorrect');
+                                }
+                            });
+                            break;
+                        case 'dragdrop': {
+                            const dz = document.querySelector(`.drop-zone[data-question-id="${qNum}"]`);
+                            const dropped = dz ? dz.querySelector('.drag-item') : null;
+                            // Prefer hidden input (kept in sync on drop), then dataset/attribute
+                            const hiddenVal = element ? element.value.trim() : '';
+                            if (hiddenVal) {
+                                userAnswer = hiddenVal;
+                            } else if (dropped) {
+                                const dataLetter = dropped.getAttribute('data-letter') || dropped.dataset.letter;
+                                userAnswer = (dataLetter && dataLetter.trim()) || dropped.textContent.trim();
+                            } else {
+                                userAnswer = '';
+                            }
+                            const accepted = Array.isArray(correctAnswer) ? correctAnswer.map(a=>String(a).toLowerCase()) : [String(correctAnswer).toLowerCase()];
+                            isCorrect = userAnswer && accepted.includes(String(userAnswer).toLowerCase());
+                            if (!isCorrect) {
+                                const correctAnswerSpan = document.createElement('span');
+                                correctAnswerSpan.className = 'correct-inline';
+                                // show canonical uppercase answer for letters
+                                const showVal = Array.isArray(correctAnswer) ? String(correctAnswer[0]) : String(correctAnswer);
+                                correctAnswerSpan.textContent = showVal;
+                                // Make sure it sits inline with the question row
+                                correctAnswerSpan.style.display = 'inline-block';
+                                correctAnswerSpan.style.marginLeft = '8px';
+                                const anchor = dz || element; // prefer drop-zone, fallback to hidden input
+                                if (anchor) {
+                                    anchor.insertAdjacentElement('afterend', correctAnswerSpan);
+                                }
+                            }
+                            break; }
+                       case 'clickable':
+                           console.log(`Checking clickable question ${qNum}, correct answer: ${correctAnswer}`);
+                           const selectedCell = document.querySelector(`.clickable-cell[data-question="${qNum}"].selected`);
+                           console.log(`Selected cell for question ${qNum}:`, selectedCell);
+                           userAnswer = selectedCell ? selectedCell.getAttribute('data-value') : 'No Answer';
+                           console.log(`User answer for question ${qNum}: ${userAnswer}`);
+                           isCorrect = userAnswer === correctAnswer;
+                           console.log(`Question ${qNum} is correct: ${isCorrect}`);
+                           
+                           // Mark cells as correct/incorrect
+                           const allCells = document.querySelectorAll(`.clickable-cell[data-question="${qNum}"]`);
+                           allCells.forEach(cell => {
+                               if (cell.getAttribute('data-value') === correctAnswer) {
+                                   cell.classList.add('correct');
+                               } else if (cell.classList.contains('selected')) {
+                                   cell.classList.add('incorrect');
+                               }
+                           });
+                           break;
+                       case 'checkbox':
+                           const checkedBoxes = document.querySelectorAll(`input[name="${key}"]:checked`);
+                           const userAnswers = Array.from(checkedBoxes).map(cb => cb.value).sort();
+                           userAnswer = userAnswers.join(', ');
+                           const correctAnswersSorted = Array.isArray(correctAnswer) ? correctAnswer.sort() : [correctAnswer];
+                           
+                           // Count how many correct answers the user selected
+                           const correctUserAnswers = userAnswers.filter(ans => correctAnswersSorted.includes(ans));
+                           
+                           // Additive-only scoring: 1 point per correct selected; no penalty for incorrect
+                           const questionScore = correctUserAnswers.length;
+                           score += questionScore;
+                           
+                           // Mark group as fully correct only if all correct options are selected and no extra are selected
+                           isCorrect = (correctUserAnswers.length === correctAnswersSorted.length && userAnswers.length === correctAnswersSorted.length);
+                           
+                           // Mark individual checkboxes
+                           checkedBoxes.forEach(cb => {
+                               const label = cb.closest('label');
+                               if (label) {
+                                   if (correctAnswersSorted.includes(cb.value)) {
+                                       label.classList.add('correct');
+                                   } else {
+                                       label.classList.add('incorrect');
+                                   }
+                               }
+                           });
+                           
+                           // Mark correct answers that weren't selected
+                           correctAnswersSorted.forEach(correctVal => {
+                               const correctCheckbox = document.querySelector(`input[name="${key}"][value="${correctVal}"]`);
+                               if (correctCheckbox && !correctCheckbox.checked) {
+                                   const correctLabel = correctCheckbox.closest('label');
+                                   if (correctLabel) {
+                                       correctLabel.classList.add('correct');
+                                   }
+                               }
+                           });
+                           break;
+                   }
+
+                   if (btn) {
+                       btn.classList.remove('answered');
+                       btn.classList.add(isCorrect ? 'correct' : 'incorrect');
+                   }
+
+                   resultsData.push({
+                       question: qNum,
+                       userAnswer: userAnswer || 'No Answer',
+                       correctAnswer: Array.isArray(correctAnswer) ? correctAnswer.join(' / ') : String(correctAnswer),
+                       isCorrect: isCorrect
+                   });
+
+                // For checkbox questions, score was already added in the switch statement
+                // Only add score for non-checkbox questions
+                if (questionType !== 'checkbox' && isCorrect) {
+                   score++;
+               }
+            });
+
+            const deliverButton = document.getElementById('deliver-button');
+            const band = (function(raw){
+                if(raw>=39) return 9;
+                if(raw>=37) return 8.5;
+                if(raw>=35) return 8;
+                if(raw>=32) return 7.5;
+                if(raw>=30) return 7;
+                if(raw>=26) return 6.5;
+                if(raw>=23) return 6;
+                if(raw>=18) return 5.5;
+                if(raw>=16) return 5;
+                if(raw>=13) return 4.5;
+                if(raw>=10) return 4;
+                if(raw>=8)  return 3.5;
+                if(raw>=6)  return 3;
+                if(raw>=4)  return 2.5;
+                if(raw>=2)  return 2;
+                if(raw===1) return 1.5;
+                return 0;
+            })(score);
+
+            // Disable all inputs after grading
+            document.querySelectorAll('.answer-input, input[type="radio"], input[type="checkbox"]').forEach(input => {
+                input.disabled = true;
+            });
+            document.querySelectorAll('.drag-item').forEach(item => {
+                item.setAttribute('draggable', 'false');
+                item.style.cursor = 'default';
+            });
+            document.querySelectorAll('.drop-zone').forEach(zone => {
+                zone.classList.remove('drag-over'); // Ensure no lingering hover styles
+            });
+
+            // Results mode layout with transcription
+            document.querySelector('.main-container').classList.add('results-mode');
+            switchToPart(currentPart); // Show the transcription for the current part
+
+            // Populate modal content (but do not force-open yet)
+            const modal = document.getElementById('result-modal');
+            const scoreSummary = document.getElementById('score-summary');
+            const resultDetails = document.getElementById('result-details');
+            
+            scoreSummary.textContent = `You scored ${score} out of 40 (Band ${band}).`;
+            
+            let tableHTML = '<table><thead><tr><th>Question</th><th>Your Answer</th><th>Correct Answer</th><th>Result</th></tr></thead><tbody>';
+            resultsData.sort((a,b) => parseInt(a.question, 10) - parseInt(b.question, 10)).forEach(res => {
+                tableHTML += `
+                    <tr>
+                        <td>${res.question}</td>
+                        <td>${res.userAnswer}</td>
+                        <td>${res.correctAnswer}</td>
+                        <td class="${res.isCorrect ? 'result-correct' : 'result-incorrect'}">
+                            ${res.isCorrect ? '✔ Correct' : '✖ Incorrect'}
+                        </td>
+                    </tr>
+                `;
+            });
+            tableHTML += '</tbody></table>';
+            // Controls: filter toggles and export
+            const controls = document.createElement('div');
+            controls.className = 'result-controls';
+            controls.innerHTML = `
+                <label><input type="checkbox" id="toggle-correct" checked> Show correct</label>
+                <label><input type="checkbox" id="toggle-incorrect" checked> Show incorrect</label>
+                <span class="spacer"></span>
+                <button id="export-csv" class="btn-secondary">Export CSV</button>
+            `;
+            // Apply to modal
+            resultDetails.innerHTML = '';
+            resultDetails.appendChild(controls);
+            const tableContainer = document.createElement('div');
+            tableContainer.innerHTML = tableHTML;
+            resultDetails.appendChild(tableContainer);
+            
+            // Wire up filters
+            const toggleCorrect = controls.querySelector('#toggle-correct');
+            const toggleIncorrect = controls.querySelector('#toggle-incorrect');
+            function applyFilters(){
+                tableContainer.querySelectorAll('tbody tr').forEach(row => {
+                    const isCorrect = row.querySelector('td.result-correct') !== null;
+                    const isIncorrect = row.querySelector('td.result-incorrect') !== null;
+                    let visible = true;
+                    if (isCorrect && !toggleCorrect.checked) visible = false;
+                    if (isIncorrect && !toggleIncorrect.checked) visible = false;
+                    row.style.display = visible ? '' : 'none';
+                });
+            }
+            toggleCorrect.addEventListener('change', applyFilters);
+            toggleIncorrect.addEventListener('change', applyFilters);
+            applyFilters();
+            
+            // CSV export
+            controls.querySelector('#export-csv').addEventListener('click', () => {
+                const rows = [['Question','Your Answer','Correct Answer','Result']];
+                tableContainer.querySelectorAll('tbody tr').forEach(tr => {
+                    if (tr.style.display === 'none') return; // respect filters
+                    const tds = tr.querySelectorAll('td');
+                    const resultCell = tds[3];
+                    const resultText = resultCell.classList.contains('result-correct') ? 'Correct' : 'Incorrect';
+                    rows.push([tds[0].textContent.trim(), tds[1].textContent.trim(), tds[2].textContent.trim(), resultText]);
+                });
+                const csv = rows.map(r => r.map(v => '"' + v.replace(/"/g,'""') + '"').join(',')).join('\n');
+                const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'listening_results.csv';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+            resultDetails.innerHTML = tableHTML;
+
+            // Turn the deliver button into a green "My Results" button
+            deliverButton.classList.add('success');
+            deliverButton.innerHTML = '<span>My Results</span>';
+            deliverButton.disabled = false;
+
+            // Rebind click handler to open the results modal from now on
+            const myResultsBtn = deliverButton.cloneNode(true);
+            deliverButton.parentNode.replaceChild(myResultsBtn, deliverButton);
+            myResultsBtn.addEventListener('click', () => {
+                const modalEl = document.getElementById('result-modal');
+                if (modalEl) modalEl.style.display = 'flex';
+            });
+
+            // Open the modal immediately after grading
+            modal.style.display = 'flex';
+        }
+        
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeInSeconds--;
+                const minutes = Math.floor(timeInSeconds / 60);
+                const seconds = timeInSeconds % 60;
+                timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                if (timeInSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    timerDisplay.textContent = "Time's up!";
+                    checkAnswers();
+                }
+            }, 1000);
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = Math.floor(seconds % 60);
+            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        }
+
+        // Event Listeners
+        playPauseBtn.addEventListener('click', () => {
+            if (!testStarted) {
+                testStarted = true; // Timer removed, skip startTimer
+                switchToPart(currentPart, true);
+            } else {
+                if (audioPlayer.paused) {
+                    // If paused, ensure the audio source is for the current part
+                    if (!audioPlayer.src.includes(audioSource)) {
+                        audioPlayer.src = audioSource;
+                    }
+                    audioPlayer.play();
+                } else {
+                    audioPlayer.pause();
+                }
+            }
+        });
+        
+        audioPlayer.addEventListener('play', () => {
+            playPauseBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+        });
+
+        audioPlayer.addEventListener('pause', () => {
+            playPauseBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+        });
+
+        audioPlayer.addEventListener('ended', () => {
+            if (currentPart < 4) {
+                switchToPart(currentPart + 1, true);
+            }
+        });
+
+        audioPlayer.addEventListener('loadedmetadata', () => {
+            progressBar.max = audioPlayer.duration;
+            totalDurationEl.textContent = formatTime(audioPlayer.duration);
+        });
+
+        audioPlayer.addEventListener('timeupdate', () => {
+            progressBar.value = audioPlayer.currentTime;
+            currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+        });
+
+        progressBar.addEventListener('input', () => {
+            audioPlayer.currentTime = progressBar.value;
+        });
+
+        volumeSlider.addEventListener('input', (e) => audioPlayer.volume = e.target.value);
+
+        speedBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            speedOptions.classList.toggle('hidden');
+        });
+
+        speedOptions.addEventListener('click', (e) => {
+            if (e.target.dataset.speed) {
+                const speed = parseFloat(e.target.dataset.speed);
+                audioPlayer.playbackRate = speed;
+                speedBtn.textContent = `${speed}x`;
+                speedOptions.classList.add('hidden');
+            }
+        });
+        
+        document.addEventListener('click', () => {
+            if (!speedOptions.classList.contains('hidden')) {
+                speedOptions.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('deliver-button').addEventListener('click', checkAnswers);
+        
+        // ===== Drag & Drop handlers for Questions 17-20 =====
+        (function initDragDrop(){
+            // make items draggable with data transfer id
+            function handleDragStart(e){
+                const id = e.target.id;
+                if (!id) {
+                    // ensure each option has an id
+                    const letter = e.target.getAttribute('data-letter') || e.target.getAttribute('data-value');
+                    e.target.id = 'opt_' + letter;
+                }
+                e.dataTransfer.setData('text/plain', e.target.id);
+            }
+            function handleDragOver(e){
+                e.preventDefault();
+                const zone = e.currentTarget;
+                zone.classList.add('drag-over');
+            }
+            function handleDragLeave(e){
+                e.currentTarget.classList.remove('drag-over');
+            }
+            function placeItemInZone(itemEl, zone){
+                // Only allow one item per zone
+                const existing = zone.querySelector('.drag-item');
+                if (existing){
+                    // move existing back to options box
+                    const partId = zone.closest('.question-part').id;
+                    const bank = partId === 'part-2' ? document.getElementById('part2-options-box') : document.getElementById('part3-options-box');
+                    if (bank) bank.appendChild(existing);
+                }
+                // ensure letter badge is visible along with text
+                // keep full item so it remains draggable and shows its letter
+                itemEl.classList.add('in-zone');
+                zone.textContent = '';
+                zone.appendChild(itemEl);
+                // sync hidden input for this question
+                const qid = zone.getAttribute('data-question-id') || zone.getAttribute('data-question');
+                const hidden = document.getElementById('q' + qid);
+                if (hidden){
+                    const letter = itemEl.getAttribute('data-letter') || itemEl.getAttribute('data-value');
+                    hidden.value = letter;
+                }
+                updateAnsweredIndicators();
+            }
+            function handleDrop(e){
+                e.preventDefault();
+                const zone = e.currentTarget;
+                zone.classList.remove('drag-over');
+                const id = e.dataTransfer.getData('text/plain');
+                const itemEl = document.getElementById(id);
+                if (!itemEl) return;
+                placeItemInZone(itemEl, zone);
+                const ph = zone.querySelector('.placeholder');
+                if (ph) ph.style.display = 'none';
+            }
+            function handleBankDrop(e){
+                e.preventDefault();
+                const bank = e.currentTarget;
+                const id = e.dataTransfer.getData('text/plain');
+                const itemEl = document.getElementById(id);
+                if (!itemEl) return;
+                // If coming from a zone, clear that zone's hidden input
+                const fromZone = itemEl.parentElement && itemEl.parentElement.classList.contains('drop-zone') ? itemEl.parentElement : null;
+                if (fromZone){
+                    const qid = fromZone.getAttribute('data-question-id') || fromZone.getAttribute('data-question');
+                    const hidden = document.getElementById('q' + qid);
+                    if (hidden) hidden.value = '';
+                    // Restore the drop zone to show placeholder
+                    fromZone.classList.remove('filled');
+                    fromZone.innerHTML = '';
+                    const placeholder = document.createElement('span');
+                    placeholder.className = 'placeholder';
+                    placeholder.innerHTML = '&nbsp;';
+                    fromZone.appendChild(placeholder);
+                }
+                itemEl.classList.remove('in-zone');
+                bank.appendChild(itemEl);
+                updateAnsweredIndicators();
+            }
+            // Attach listeners for Part 2
+            document.querySelectorAll('#part-2 .drag-item').forEach(el=>{
+                el.addEventListener('dragstart', handleDragStart);
+            });
+            document.querySelectorAll('#part-2 .drop-zone').forEach(zone=>{
+                zone.addEventListener('dragover', handleDragOver);
+                zone.addEventListener('dragleave', handleDragLeave);
+                zone.addEventListener('drop', handleDrop);
+            });
+            const bank2 = document.getElementById('part2-options-box');
+            if (bank2){
+                bank2.addEventListener('dragover', handleDragOver);
+                bank2.addEventListener('dragleave', handleDragLeave);
+                bank2.addEventListener('drop', handleBankDrop);
+            }
+            
+            // Attach listeners for Part 3
+            document.querySelectorAll('#part-3 .drag-item').forEach(el=>{
+                el.addEventListener('dragstart', handleDragStart);
+            });
+            document.querySelectorAll('#part-3 .drop-zone').forEach(zone=>{
+                zone.addEventListener('dragover', handleDragOver);
+                zone.addEventListener('dragleave', handleDragLeave);
+                zone.addEventListener('drop', handleDrop);
+            });
+            const bank3 = document.getElementById('part3-options-box');
+            if (bank3){
+                bank3.addEventListener('dragover', handleDragOver);
+                bank3.addEventListener('dragleave', handleDragLeave);
+                bank3.addEventListener('drop', handleBankDrop);
+            }
+        })();
+        
+        // Go To Question Widget Logic
+        const gotoWidget = document.getElementById('goto-widget');
+        const gotoInput = document.getElementById('goto-input');
+        const gotoBtn = document.getElementById('goto-btn');
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key >= '0' && e.key <= '9' && document.activeElement.tagName !== 'INPUT') {
+                e.preventDefault();
+                gotoWidget.classList.remove('hidden');
+                gotoInput.focus();
+                gotoInput.value = e.key;
+            }
+            if (e.key === 'Enter' && document.activeElement === gotoInput) {
+                gotoBtn.click();
+            }
+            if (e.key === 'Escape') {
+                gotoWidget.classList.add('hidden');
+                gotoInput.value = '';
+            }
+        });
+
+        if (gotoBtn) {
+            gotoBtn.addEventListener('click', () => {
+                const qNum = parseInt(gotoInput.value, 10);
+                if (qNum >= 1 && qNum <= 40) {
+                    goToQuestion(qNum);
+                    gotoWidget.classList.add('hidden');
+                    gotoInput.value = '';
+                } else {
+                    alert('Please enter a number between 1 and 40.');
+                }
+            });
+        }
+
+        // Add listener for the modal close button
+        document.getElementById('modal-close-button').addEventListener('click', () => {
+            document.getElementById('result-modal').style.display = 'none';
+        });
+
+        // === Tap-to-select & tap-to-drop for drag items (mobile support) ===
+            document.body.addEventListener('click', function(e){
+            const item = e.target.closest('.drag-item');
+            if(item && item.getAttribute('draggable')){
+                // Toggle selection
+                document.querySelectorAll('.drag-item.selected').forEach(i=>i.classList.remove('selected'));
+                item.classList.add('selected');
+                draggedElement = item;
+                return;
+            }
+            const dz = e.target.closest('.drop-zone');
+            if(dz && draggedElement){
+                // Skip if this is a Part 2 drop zone (let the Part 2 specific handler handle it)
+                if (dz.closest('#part-2')) {
+                    return;
+                }
+                // If already filled, move old back
+                const container = dz.closest('.matching-container') || dz.closest('.matching-question-container') || document;
+                const optionsList = container.querySelector('.matching-options-list') || document.querySelector('.matching-options-list');
+                if(dz.children.length>0 && dz.firstElementChild!==draggedElement){
+                    // restore original label (with letter) when returning to bank
+                    const old = dz.firstElementChild;
+                    if (old && old.dataset && old.dataset.fullLabel) {
+                        old.textContent = old.dataset.fullLabel;
+                    }
+                    optionsList.appendChild(old);
+                    // clear hidden value for the zone now emptied
+                    const qIdOld = dz.getAttribute('data-question-id');
+                    const hiddenOld = document.getElementById(`q${qIdOld}`);
+                    if (hiddenOld) hiddenOld.value = '';
+                    // Restore the drop zone to show placeholder
+                    dz.classList.remove('filled');
+                    dz.innerHTML = '';
+                    const placeholder = document.createElement('span');
+                    placeholder.className = 'placeholder';
+                    placeholder.innerHTML = '&nbsp;';
+                    dz.appendChild(placeholder);
+                }
+                // save full label before mutating
+                if (!draggedElement.dataset.fullLabel) {
+                    draggedElement.dataset.fullLabel = draggedElement.textContent.trim();
+                }
+                // show only the option text (strip leading "A. ", "B. ", etc.)
+                const full = draggedElement.dataset.fullLabel;
+                const letter = (full.match(/^\s*([A-G])\s*[\.)-]?/i) || [,''])[1].toUpperCase();
+                const plain = full.replace(/^\s*[A-G]\s*[\.)-]?\s*/i, '');
+                if (!draggedElement.dataset.letter && letter) {
+                    draggedElement.dataset.letter = letter;
+                }
+                                    // Create a new element with the letter pill and plain text
+                    const newElement = document.createElement('div');
+                    newElement.className = 'drag-item';
+                    newElement.setAttribute('draggable', 'true');
+                    newElement.setAttribute('data-letter', letter);
+                    newElement.setAttribute('data-value', letter);
+                    newElement.setAttribute('data-fullLabel', full);
+                    newElement.style.width = 'auto';
+                    newElement.style.minWidth = 'fit-content';
+                    
+                    // Create the letter pill
+                    const letterPill = document.createElement('span');
+                    letterPill.className = 'drop-letter';
+                    letterPill.textContent = letter;
+                    
+                    // Create the text span
+                    const textSpan = document.createElement('span');
+                    textSpan.textContent = plain;
+                    textSpan.style.marginLeft = '8px';
+                    textSpan.style.whiteSpace = 'nowrap';
+                    
+                    newElement.appendChild(letterPill);
+                    newElement.appendChild(textSpan);
+                    
+                    // Replace the original element
+                    draggedElement.parentNode.replaceChild(newElement, draggedElement);
+                    draggedElement = newElement;
+                dz.appendChild(draggedElement);
+                draggedElement.classList.remove('selected');
+                draggedElement=null;
+                // style as filled pill and hide placeholder
+                dz.classList.add('filled');
+                const placeholder = dz.querySelector('.placeholder');
+                if (placeholder) placeholder.style.display = 'none';
+                // sync hidden input to the letter
+                const qId = dz.getAttribute('data-question-id');
+                const hiddenInput = document.getElementById(`q${qId}`);
+                if (hiddenInput) hiddenInput.value = letter || '';
+                updateAnsweredIndicators();
+            }
+        });
+
+        // === Mobile highlight/comment toolbar ===
+        const mobileToolbar = document.getElementById('mobile-selection-menu');
+        function positionToolbar(){
+            const sel = window.getSelection();
+            if(sel.rangeCount===0 || sel.isCollapsed){
+                mobileToolbar.classList.add('hidden');
+                return;
+            }
+            const range = sel.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            mobileToolbar.style.top = window.scrollY + rect.top - mobileToolbar.offsetHeight - 8 + 'px';
+            mobileToolbar.style.left = window.scrollX + rect.left + 'px';
+            mobileToolbar.classList.remove('hidden');
+        }
+        document.addEventListener('selectionchange', () => {
+            const sel = window.getSelection();
+            if(sel && sel.rangeCount>0 && !sel.isCollapsed){
+                selectedRange = sel.getRangeAt(0);
+                selectedText = sel.toString();
+            }
+            if('ontouchstart' in window || navigator.maxTouchPoints>0){
+                setTimeout(positionToolbar, 0);
+            }
+        });
+        document.addEventListener('click', (e)=>{
+            if(!e.target.closest('#mobile-selection-menu')){
+                mobileToolbar.classList.add('hidden');
+            }
+        });
+
+        /* ---------------- Drag and Drop for Matching Questions ---------------- */
+
+        (function initDragAndDrop() {
+            const container = document.querySelector('.left-panel');
+            if (!container) return;
+
+            container.addEventListener('dragstart', (e) => {
+                if (e.target.classList.contains('drag-item')) {
+                    draggedElement = e.target;
+                    setTimeout(() => {
+                        e.target.classList.add('dragging');
+                    }, 0);
+                }
+            });
+
+            container.addEventListener('dragend', (e) => {
+                if (draggedElement) {
+                    draggedElement.classList.remove('dragging');
+                    draggedElement = null;
+                }
+            });
+
+            container.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const target = e.target;
+                const dropZone = target.closest('.drop-zone');
+                const optionsList = target.closest('.matching-options-list');
+
+                if (dropZone || optionsList) {
+                    const overElement = dropZone || optionsList;
+                    document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+                    overElement.classList.add('drag-over');
+                }
+            });
+
+            container.addEventListener('dragleave', (e) => {
+                const target = e.target;
+                const dropZone = target.closest('.drop-zone');
+                const optionsList = target.closest('.matching-options-list');
+                if (dropZone || optionsList) {
+                    const overElement = dropZone || optionsList;
+                    overElement.classList.remove('drag-over');
+                }
+            });
+
+
+            container.addEventListener('drop', (e) => {
+                e.preventDefault();
+                if (!draggedElement) return;
+
+                const dropTarget = e.target.closest('.drop-zone, .matching-options-list');
+                if (!dropTarget) {
+                    draggedElement.classList.remove('dragging');
+                    draggedElement = null;
+                    return;
+                }
+
+                // Skip if this is a Part 2 drop zone (let the Part 2 specific handler handle it)
+                if (dropTarget.closest('#part-2')) {
+                    draggedElement.classList.remove('dragging');
+                    draggedElement = null;
+                    return;
+                }
+
+                document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+                
+                const existingItem = dropTarget.matches('.drop-zone') ? dropTarget.querySelector('.drag-item') : null;
+                const originalParent = draggedElement.parentNode;
+
+                // If there's an item in the target dropzone, swap them
+                if (existingItem) {
+                    // when moving existing item back, restore its full label
+                    if (existingItem.dataset && existingItem.dataset.fullLabel) {
+                        existingItem.textContent = existingItem.dataset.fullLabel;
+                    }
+                    
+                    // If the original parent is a drop-zone, we need to handle it properly
+                    if (originalParent.classList && originalParent.classList.contains('drop-zone')) {
+                        // Clear the original drop zone first
+                        originalParent.innerHTML = '';
+                        originalParent.classList.remove('filled');
+                        
+                        // Restore placeholder
+                        const placeholder = document.createElement('span');
+                        placeholder.className = 'placeholder';
+                        placeholder.innerHTML = '&nbsp;';
+                        originalParent.appendChild(placeholder);
+                        
+                        // Clear the hidden input
+                        const qId = originalParent.getAttribute('data-question-id');
+                        const hiddenInput = document.getElementById(`q${qId}`);
+                        if (hiddenInput) hiddenInput.value = '';
+                        
+                        // Now place the existing item in the original drop zone
+                        originalParent.appendChild(existingItem);
+                        
+                        // Update the original drop zone to show it's filled
+                        originalParent.classList.add('filled');
+                        if (placeholder) placeholder.style.display = 'none';
+                        
+                        // Update the hidden input for the original drop zone
+                        const existingItemValue = existingItem.getAttribute('data-value') || 
+                                               existingItem.getAttribute('data-letter') || 
+                                               (existingItem.dataset.fullLabel ? existingItem.dataset.fullLabel.trim().charAt(0).toUpperCase() : '');
+                        if (hiddenInput) hiddenInput.value = existingItemValue;
+                    } else {
+                        // If original parent is not a drop zone, just append normally
+                        originalParent.appendChild(existingItem);
+                    }
+                } else {
+                    // If there's no existing item in the target drop zone, but the dragged item is coming from a drop zone,
+                    // we need to restore the original drop zone to its empty state
+                    if (originalParent.classList && originalParent.classList.contains('drop-zone')) {
+                        // Clear the original drop zone
+                        originalParent.innerHTML = '';
+                        originalParent.classList.remove('filled');
+                        
+                        // Restore placeholder
+                        const placeholder = document.createElement('span');
+                        placeholder.className = 'placeholder';
+                        placeholder.innerHTML = '&nbsp;';
+                        originalParent.appendChild(placeholder);
+                        
+                        // Clear the hidden input
+                        const qId = originalParent.getAttribute('data-question-id');
+                        const hiddenInput = document.getElementById(`q${qId}`);
+                        if (hiddenInput) hiddenInput.value = '';
+                    }
+                }
+                
+                dropTarget.appendChild(draggedElement);
+
+                if(dropTarget.matches('.drop-zone')) {
+                    const placeholder = dropTarget.querySelector('.placeholder');
+                    if (placeholder) placeholder.style.display = 'none';
+                    dropTarget.classList.add('filled');
+                    // save full label once and show plain text only inside zone
+                    if (!draggedElement.dataset.fullLabel) {
+                        draggedElement.dataset.fullLabel = draggedElement.textContent.trim();
+                    }
+                    const full = draggedElement.dataset.fullLabel;
+                    const letter = (full.match(/^\s*([A-G])\s*[\.)-]?/i) || [,''])[1].toUpperCase();
+                    const plain = full.replace(/^\s*[A-G]\s*[\.)-]?\s*/i, '');
+                    if (!draggedElement.dataset.letter && letter) {
+                        draggedElement.dataset.letter = letter;
+                    }
+                    // Create a new element with the letter pill and plain text
+                    const newElement = document.createElement('div');
+                    newElement.className = 'drag-item';
+                    newElement.setAttribute('draggable', 'true');
+                    newElement.setAttribute('data-letter', letter);
+                    newElement.setAttribute('data-value', letter);
+                    newElement.setAttribute('data-fullLabel', full);
+                    newElement.style.width = 'auto';
+                    newElement.style.minWidth = 'fit-content';
+                    
+                    // Create the letter pill
+                    const letterPill = document.createElement('span');
+                    letterPill.className = 'drop-letter';
+                    letterPill.textContent = letter;
+                    
+                    // Create the text span
+                    const textSpan = document.createElement('span');
+                    textSpan.textContent = plain;
+                    textSpan.style.marginLeft = '8px';
+                    textSpan.style.whiteSpace = 'nowrap';
+                    
+                    newElement.appendChild(letterPill);
+                    newElement.appendChild(textSpan);
+                    
+                    // Replace the original element
+                    draggedElement.parentNode.replaceChild(newElement, draggedElement);
+                    draggedElement = newElement;
+                    // sync hidden input (use data-letter if present, else text)
+                    const qId = dropTarget.getAttribute('data-question-id');
+                    const hiddenInput = document.getElementById(`q${qId}`);
+                    if (hiddenInput) {
+                        const val = draggedElement.getAttribute('data-letter') || letter || (draggedElement.dataset.fullLabel ? draggedElement.dataset.fullLabel.trim().charAt(0).toUpperCase() : draggedElement.textContent.trim());
+                        hiddenInput.value = val;
+                    }
+                }
+
+                draggedElement.classList.remove('dragging');
+                draggedElement = null;
+                updateAnsweredIndicators();
+            });
+        })();
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchToPart(1);
+            goToQuestion(1);
+            setupCheckboxLimits();
+            
+            // Initialize drag and drop and clickable cells
+            initAllDragAndDrop();
+            ensureClickableHiddenInputs();
+            
+            // Test clickable cells after a short delay
+            setTimeout(() => {
+                testClickableCells();
+            }, 1000);
+
+            document.body.addEventListener('contextmenu', function (e) {
+                const text = window.getSelection().toString();
+                if (!text) return;
+                e.preventDefault();
+                const menu = document.getElementById('contextMenu');
+                menu.style.left = e.pageX + 'px';
+                menu.style.top = e.pageY + 'px';
+                menu.style.display = 'block';
+
+                const target = e.target;
+                const clearItem = document.getElementById('clear-item');
+                contextElement = target.closest('.highlight, .comment-highlight');
+                if(contextElement){
+                    clearItem.style.display = 'block';
+                } else {
+                    clearItem.style.display = 'none';
+                }
+            });
+            
+            document.body.addEventListener('click', function(e) {
+                if (e.target.closest('.context-menu')) return;
+                document.getElementById('contextMenu').style.display = 'none';
+            });
+        });
+
+        // Initial setup on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateAnsweredIndicators();
+            ensureClickableHiddenInputs();
+            
+            // Add specific event listeners for questions 17-20 radio buttons
+            document.querySelectorAll('input[name="q17"], input[name="q18"], input[name="q19"], input[name="q20"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const questionNumber = this.name.substring(1); // Remove 'q' prefix
+                    const hiddenInput = document.getElementById(`q${questionNumber}`);
+                    if (hiddenInput) {
+                        hiddenInput.value = this.value;
+                        console.log(`Question ${questionNumber} selected: ${this.value}`);
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.mcq-table td').forEach(cell => {
+            cell.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'INPUT') {
+                    const radio = cell.querySelector('input[type="radio"]');
+                    if (radio && !radio.disabled) {
+                        radio.checked = true;
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('.answer-input, input[type="radio"], input[type="checkbox"], select').forEach(input => {
+            input.addEventListener('input', updateAnsweredIndicators);
+            input.addEventListener('change', updateAnsweredIndicators);
+        });
+
+        function initAllDragAndDrop() {
+            // Initialize clickable cells for questions 27-31
+            initClickableCells();
+            
+            // Add event listeners for map questions (15-20)
+            for (let i = 15; i <= 20; i++) {
+                const selectElement = document.getElementById(`q${i}`);
+                if (selectElement) {
+                    selectElement.addEventListener('change', updateAnsweredIndicators);
+                }
+            }
+        }
+
+        function initClickableCells() {
+            const clickableCells = document.querySelectorAll('.clickable-cell');
+            clickableCells.forEach(cell => {
+                cell.addEventListener('click', function() {
+                    const questionNumber = this.getAttribute('data-question');
+                    const value = this.getAttribute('data-value');
+                    selectCell(this, questionNumber, value);
+                });
+            });
+        }
+
+        function selectCell(clickedCell, questionNumber, value) {
+            // Remove previous selection for this question
+            const questionRow = clickedCell.closest('tr');
+            const cellsInRow = questionRow.querySelectorAll('.clickable-cell');
+            cellsInRow.forEach(cell => {
+                cell.classList.remove('selected');
+                cell.style.backgroundColor = '';
+            });
+            
+            // Select the clicked cell
+            clickedCell.classList.add('selected');
+            clickedCell.style.backgroundColor = '#4a90e2';
+            clickedCell.style.color = 'white';
+            // Persist selection in hidden input (for answered state and grading if needed)
+            const hiddenInput = document.getElementById(`q${questionNumber}`);
+            if (hiddenInput) {
+                hiddenInput.value = value;
+            }
+            
+            // Update answered indicators
+            updateAnsweredIndicators();
+        }
+
+        function ensureClickableHiddenInputs() {
+            for (let q = 27; q <= 30; q++) {
+                if (!document.getElementById(`q${q}`)) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.id = `q${q}`;
+                    document.body.appendChild(input);
+                }
+            }
+        }
+
+        function findParentOptionsList(element) {
+            // Specific for map
+            if (element.closest('#map-drag-container')) {
+                return document.getElementById('map-options-q11-15');
+            }
+            // Specific for Part 3
+            if (element.closest('#part-3')) {
+                return document.getElementById('part3-options-box');
+            }
+            // Generic for matching
+            const container = element.closest('.matching-container');
+            if (container) {
+                return container.querySelector('.matching-options-list');
+            }
+            return null;
+        }
+
+        let transcriptionHighlighted = false;
+        function highlightAnswersInTranscription() {
+            if (transcriptionHighlighted) return;
+
+            const highlightedTranscripts = { 1: '', 2: '', 3: '', 4: '' };
+
+            for (let i = 1; i <= 4; i++) {
+                const partElement = document.querySelector(`#transcription-data [data-part="${i}"]`);
+                if (partElement) highlightedTranscripts[i] = partElement.innerHTML;
+            }
+
+            for (const key in correctAnswers) {
+                const answers = Array.isArray(correctAnswers[key]) ? correctAnswers[key] : [correctAnswers[key]];
+                if (answers.every(answer => /^[A-G]$/.test(answer))) {
+                    continue;
+                }
+
+                const qNum = parseInt(key.match(/\d+/)[0]);
+                let partNumber = 1;
+                if (qNum > 10 && qNum <= 20) partNumber = 2;
+                else if (qNum > 20 && qNum <= 30) partNumber = 3;
+                else if (qNum > 30) partNumber = 4;
+
+                if (!highlightedTranscripts[partNumber]) continue;
+
+                let answersToHighlight = correctAnswers[key];
+                if (!Array.isArray(answersToHighlight)) {
+                    answersToHighlight = [answersToHighlight];
+                }
+
+                for (const answer of answersToHighlight) {
+                    if (/^[A-G]$/.test(answer)) continue;
+                    
+                    let searchTerm = answer.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                    searchTerm = searchTerm.replace(/\\\(s\\\)/g, '(s)?');
+                    
+                    const regex = new RegExp(`\\b(${searchTerm})\\b`, 'gi');
+                    
+                    highlightedTranscripts[partNumber] = highlightedTranscripts[partNumber].replace(
+                        regex,
+                        '<span class="highlight">$1</span>'
+                    );
+                }
+            }
+
+            for (let i = 1; i <= 4; i++) {
+                const partElement = document.querySelector(`#transcription-data [data-part="${i}"]`);
+                if(partElement) partElement.innerHTML = highlightedTranscripts[i];
+            }
+            transcriptionHighlighted = true;
+        }
+        
+        function closeContextMenu() {
+            document.getElementById('contextMenu').style.display = 'none';
+            contextElement = null;
+        }
+    </script> -->
+</body>
+</html>
