@@ -124,6 +124,7 @@ class IELTSWritingTest {
     clearInterval(this.timerInterval);
     this.currentTime = 0;
     this.updateTimerDisplay();
+    this.downloadAnswers();
 
     // Show time up message
     alert("Time is up! Your answers have been automatically saved.");
